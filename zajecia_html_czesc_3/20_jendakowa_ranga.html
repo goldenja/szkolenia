@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        /* Trzy selektory elementów o tej samej specyficzności */
+        a {
+            color: teal;
+        }
+
+        a {
+            color: brown;
+        }
+
+        /* Ponieważ ta reguła jest niżej, do wszystkich linków zostanie zastosowany pomarańczowy kolor tekstu */
+        a {
+            color: orange;
+        }
+    </style>
+    <title>Jednakowa ranga</title>
+</head>
+
+<body>
+    <article class="post">
+        <a href="" class="post-link">Czytaj więcej...</a>
+    </article>
+</body>
+
+</html>
