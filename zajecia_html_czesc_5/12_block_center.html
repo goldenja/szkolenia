@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>block center</title>
+
+    <style type="text/css">
+        .parent {
+            background-color: #3f51b5;
+        }
+
+        .child {
+            max-width: 300px;
+            margin-right: auto;
+            margin-left: auto;
+
+            /* margin: 0 auto; */
+            background-color: #4caf50;
+            text-align: center;
+        }
+
+        .parent,
+        .child {
+            padding: 20px;
+            border-radius: 4px;
+
+        }
+
+        body {
+            background-color: #f9f9fd;
+            font-family: sans-serif;
+            line-height: 1.5;
+            color: #fff;
+            font-size: 20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parent">
+        <p>Parent element</p>
+        <div class="child">Block-level child element</div>
+    </div>
+</body>
+
+</html>

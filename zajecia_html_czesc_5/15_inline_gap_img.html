@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline gap</title>
+
+    <style type="text/css">
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+            background-color: #f9f9fd;
+        }
+
+        .card {
+            max-width: 320px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #f44336;
+            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card-image.no-gap {
+            display: block;
+        }
+
+        .card-heading {
+            margin: 0;
+            padding: 20px;
+            font-weight: 500;
+            background-color: #03a9f4;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="card">
+        <img class="card-image"
+            src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=240&w=320"
+            alt="A cat">
+        <h2 class="card-heading">Card title 1</h2>
+    </div>
+
+    <div class="card">
+        <img class="card-image no-gap"
+            src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=240&w=320"
+            alt="A cat">
+        <h2 class="card-heading">Card title 2</h2>
+    </div>
+</body>
+
+</html>
