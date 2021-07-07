@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f9f9fd;
+        }
+
+        .page-header {
+            /*  Making header.page-header a Flex-container and aligning elements  */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #607d8b;
+            border-radius: 4px;
+            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo {
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #ff5722;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .menu {
+            display: flex;
+            padding: 15px;
+            margin: 0;
+            list-style: none;
+            border-radius: 4px;
+            background-color: #2196f3;
+        }
+
+        .menu>.item:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .menu .link {
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: black;
+            background-color: #fff;
+        }
+
+        .menu .link:hover,
+        .menu .link:focus,
+        .logo:hover,
+        .logo:focus {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <a href="" class="logo">Logo</a>
+
+        <ul class="menu">
+            <li class="item"><a href="" class="link">Home page</a></li>
+            <li class="item"><a href="" class="link">Blog</a></li>
+            <li class="item"><a href="" class="link">Podcasts</a></li>
+            <li class="item"><a href="" class="link">Contacts</a></li>
+        </ul>
+    </header>
+</body>
+
+
+</html>
