@@ -1,0 +1,30 @@
+body {
+    background-color: gray;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.option-container {
+    padding: 5px;
+    border: 4px solid white;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.option , .command {
+    padding: 10px;
+    border: 4px solid white;
+    border-radius: 5px;
+    margin: 0px 10px 0px 0px;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: lowercase;
+    font-size: 25px;
+}
+
+.option:hover, .option-active {
+    background: tomato;
+}
+
+
+

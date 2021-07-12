@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box::before {
+            content: 'To jest tekst w ::before';
+            font-size: 40px;
+            color: orange;
+        }
+
+        .box::after {
+            display: block;
+            content: 'To jest tekst w ::after';
+            font-size: 30px;
+            color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia itaque quia
+        nobis fugit amet adipisci, corrupti animi, iusto eius a sed totam voluptas
+        porro. Dolorem aliquid rerum magnam eligendi aspernatur.
+    </div>
+
+</body>
+
+</html>
