@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title>Document</title>
+    <style>
+        .circle,
+        .cross {
+            display: none;
+        }
+
+        rect {
+            fill: white;
+            stroke: white;
+            stroke-width: 4;
+        }
+        rect:hover{
+            fill: rgba(242, 132, 110, 0.53);
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="300" height="300" style="outline: 2px dashed #2a2a2a;">
+
+        <!-- linie poziome planszy -->
+        <line x1="20" y1="100" x2="270" y2="100" stroke="#2a2a2a" stroke-width="10" />
+        <line x1="20" y1="190" x2="270" y2="190" stroke="#2a2a2a" stroke-width="10" />
+
+        <!-- linie pionowe planszy -->
+        <line x1="100" y1="20" x2="100" y2="270" stroke="#2a2a2a" stroke-width="10" />
+        <line x1="190" y1="20" x2="190" y2="270" stroke="#2a2a2a" stroke-width="10" />
+
+        <!-- pierwszy rząd -->
+        <rect width="70" height="70" x="20" y="20" />
+        <rect width="70" height="70" x="110" y="20" />
+        <rect width="70" height="70" x="200" y="20" />
+        <!-- drugi rząd -->
+        <rect width="70" height="70" x="20" y="110" />
+        <rect width="70" height="70" x="110" y="110" />
+        <rect width="70" height="70" x="200" y="110" />
+        <!-- trzeci rząd -->
+        <rect width="70" height="70" x="20" y="200" />
+        <rect width="70" height="70" x="110" y="200" />
+        <rect width="70" height="70" x="200" y="200" />
+
+    </svg>
+    <script>
+        (function () {
+
+            var circleClass = 'circle';
+            var crossClass = 'cross';
+            var currentClass = circleClass;
+
+            $('rect').click(function (e) {
+                if (!this.currentClass) {
+                    $(this).addClass(currentClass);
+                    if (currentClass === circleClass) {
+                        drawCircle(this.x.baseVal.value + 35, this.y.baseVal.value + 35);
+                    }
+                    else {
+                        drawCross(this.x.baseVal.value + 17, this.y.baseVal.value + 17);
+                    }
+                    currentClass = currentClass === circleClass ? crossClass : circleClass;
+                }
+            });
+        })();
+
+        function SVG(tag) {
+            return document.createElementNS('http://www.w3.org/2000/svg', tag);
+        }
+
+        var drawCircle = function (x, y) {
+            var $svg = $("svg");
+            $(SVG('circle'))
+                .attr('cx', x)
+                .attr('cy', y)
+                .attr('r', 20)
+                .attr('fill', 'white')
+                .attr('stroke', 'black')
+                .attr('stroke-width', '10')
+                .appendTo($svg);
+        };
+
+        var drawCross = function (x, y) {
+            var $svg = $("svg");
+
+            $(SVG('line'))
+                .attr('x1', x)
+                .attr('y1', y)
+                .attr('x2', x + 35)
+                .attr('y2', y + 35)
+                .attr('fill', 'white')
+                .attr('stroke', 'black')
+                .attr('stroke-width', '10')
+                .appendTo($svg);
+
+            $(SVG('line'))
+                .attr('x1', x + 35)
+                .attr('y1', y)
+                .attr('x2', x)
+                .attr('y2', y + 35)
+                .attr('fill', 'white')
+                .attr('stroke', 'black')
+                .attr('stroke-width', '10')
+                .appendTo($svg);
+        };
+    </script>
+</body>
+
+</html>
