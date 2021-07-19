@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            padding: 40px;
+            background-image: url("https://cdn.pixabay.com/photo/2020/10/07/10/51/mountains-5634817_1280.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+        }
+
+
+        .box {
+            height: 300px;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+        }
+
+        .box:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .box:nth-child(1) {
+            background-color: #2196f3;
+        }
+
+        .box:nth-child(2) {
+            background-color: #4caf50;
+        }
+
+        .box:nth-child(3) {
+            background-color: #ff9800;
+        }
+
+        .box:nth-child(4) {
+            background-color: #e91e63;
+        }
+
+        .button-add {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            height: 80px;
+            width: 80px;
+            background-color:tomato;
+            font-size: 70px;
+            color: white;
+            font-weight: 900;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 1px 1px grey;
+            cursor: pointer;
+        }
+
+        .button-add:hover {
+            opacity: 0.9;
+        }
+
+        .button-add span {
+            text-shadow: 2px 2px #ff0000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="button-add"><span>+</span></div>
+</body>
+
+</html>

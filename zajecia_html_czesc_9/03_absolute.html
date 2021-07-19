@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url("images/background.png") no-repeat ;
+        }
+
+
+        .rect-frame {
+            display: inline-block;
+            box-sizing: border-box;
+            border: 2px dashed dimgray;
+            width: 250px;
+            height: 250px;
+            margin: 20px;
+        }
+
+        .rect-frame-filled {
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: indianred;
+            width: 210px;
+            height: 210px;
+            margin: 40px;
+            position: static;
+        }
+
+        .rect-frame-container {
+            position: absolute;
+        }
+
+        .rect-frame-filled.absolute {
+            position: absolute;
+        }
+
+        .rect-frame-filled.absolute.top-left {
+            opacity: 0.5;
+            left: 120px;
+            top: 60px;
+            background-color: lightseagreen;
+        }
+
+        .rect-frame-filled.absolute.right-bottom{
+            opacity: 0.5;
+            right: 120px;
+            bottom: 60px;
+            background-color: orangered;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="rect-frame-container">
+        <div class="rect-frame" ></div>
+        <div class="rect-frame"></div>
+        <div class="rect-frame"></div>
+        <div class="rect-frame"></div>
+    </div>
+
+    <div class="rect-frame-container" >
+        <div class="rect-frame-filled absolute top-left" ></div>
+        <div class="rect-frame-filled absolute"></div>
+        <div class="rect-frame-filled absolute right-bottom"></div>
+        <div class="rect-frame-filled"></div>
+    </div>  
+</body>
+</html>

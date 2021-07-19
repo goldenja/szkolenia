@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: helvetica neue;
+        }
+
+        nav {
+            background: #333;
+            padding: .15em 0;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2.5em;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav.nav-sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+        }
+
+        header {
+            background: hotpink;
+            color: #fff;
+            display: flex;
+            min-height: 250px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+        }
+
+        article {
+            line-height: 1.5em;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50rem;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        article h1 {
+            padding-top: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-main">
+        <ul>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Products</h1>
+    </header>
+    <nav class="nav-sticky">
+        <ul>
+            <li><a href="#hoses">Hoses</a></li>
+            <li><a href="#rakes">Rakes</a></li>
+            <li><a href="#shovels">Shovels</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1 id="hoses">Hoses</h1>
+        <p>Bacon ipsum dolor amet frankfurter pork loin picanha short ribs. T-bone burgdoggen fatback chuck cow, jerky
+            drumstick pork tongue pastrami strip steak pig ball tip. Swine ribeye beef ribs ham, pig venison jowl ball
+            tip pork chop fatback flank biltong tenderloin brisket. Pig sausage landjaeger shankle, cow pork belly
+            biltong shank shoulder tri-tip andouille jowl tongue. Pork chop strip steak jerky boudin ball tip pork belly
+            tenderloin doner. T-bone shank jerky pancetta tenderloin, prosciutto porchetta landjaeger meatloaf drumstick
+            biltong chuck. Beef ham pork chop flank, kielbasa shank corned beef salami alcatra cupim tongue pastrami
+            meatball andouille frankfurter.</p>
+
+        <h1 id="rakes">Rakes</h1>
+        <p>Strip steak swine pork chop, meatball meatloaf shank pancetta tri-tip ground round ball tip. Turducken
+            prosciutto beef ribs, picanha biltong kevin spare ribs pig. Meatball cupim strip steak ribeye salami. Rump
+            filet mignon doner flank bacon tongue ribeye jowl turkey hamburger prosciutto pig landjaeger pork loin.
+            Biltong kevin beef, shoulder t-bone short loin ball tip hamburger bacon flank. Sirloin venison prosciutto,
+            chicken meatball swine andouille shank pig alcatra meatloaf chuck brisket.</p>
+
+        <h1 id="shovels">Shovels</h1>
+        <p>Pork filet mignon ball tip drumstick shankle doner salami pastrami. Ham cow beef ribs burgdoggen drumstick
+            cupim. Swine ground round kevin, bresaola pig strip steak porchetta turkey picanha andouille doner. Jerky
+            frankfurter short loin boudin filet mignon strip steak. Shoulder hamburger sirloin beef pastrami pork chop
+            shankle ham hock spare ribs ground round jowl. Pork belly burgdoggen frankfurter t-bone, cupim short loin
+            ham. Beef ribs fatback t-bone prosciutto, cupim capicola spare ribs chicken.</p>
+    </article>
+</body>
+
+</html>
