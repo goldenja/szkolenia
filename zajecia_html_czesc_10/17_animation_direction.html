@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    img {
+
+      animation-name: spin;
+      animation-duration: 2s;
+
+      border: 1px solid tomato;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: translatex(0);
+        border-radius: 0;
+      }
+
+      100% {
+        transform: translatex(420px);
+        border-radius: 50%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <img src="https://image.flaticon.com/icons/svg/2917/2917242.svg" alt="Солнышко" width="300" height="300">
+
+</body>
+
+</html>

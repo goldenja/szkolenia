@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Range with fixed minimum</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <style>
+    :root {
+      --dot-size: 16px;
+    }
+
+    * {
+      box-sizing: content-box;
+    }
+
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+      line-height: 1.5;
+      color: #2a2a2a;
+    }
+
+    .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-content: center;
+      margin-left: auto;
+      margin-right: auto;
+
+      border: 2px solid black;
+      border-radius: 50%;
+    }
+
+    .box {
+      width: 100px;
+      height: 1px;
+      font-size: 17px;
+      transform-origin: center left;
+      animation: rotateWithOrigin 6000ms linear 1000ms infinite;
+
+      background-color: black;
+    }
+
+
+
+
+
+
+    @keyframes rotateWithOrigin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="box"></div>
+
+  </div>
+
+
+</body>
+
+</html>

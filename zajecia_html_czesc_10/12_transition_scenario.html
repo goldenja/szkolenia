@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      min-height: 500px;
+      background-image: url(./images/road.png);
+      background-size: contain;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .box {
+      position: relative;
+      width: 200px;
+      min-height: 100px;
+      margin: 10px;
+      font-size: 17px;
+      transition-duration: 3s;
+      transition-property: transform;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+
+    .box:nth-child(1) {
+      transition: transform 3000ms linear 1s;
+      background-image: url(./images/car1.png);
+      margin-top: 100px;
+    }
+
+    .box:nth-child(2) {
+      transition: transform 1500ms ease-in 1s, background-image 100ms linear 2500ms;
+      background-image: url(./images/car2.png);
+      margin-bottom: 100px;
+    }
+
+    .container:hover .box:nth-child(1) {
+      transform: translatex(calc(100vw - 200px));
+    }
+
+    .container:hover .box:nth-child(2) {
+      transform: translatex(calc(50vw - 200px));
+      background-image: url(./images/explosion.png), url(./images/car2.png);
+    }
+
+    .meta {
+      position: absolute;
+      right: 100px;
+      height: 100%;
+      background-image: url(./images/meta.jpg);
+      z-index: 2;
+      width: 68px;
+      border: 3px solid black;
+    }
+
+    .meta-title {
+      font-weight: 900;
+      font-size: 50px;
+      color: coral;
+      transform: rotate(270deg);
+      letter-spacing: 10px;
+      background-color: white;
+      position: absolute;
+      padding: 10px;
+      top: 210px;
+      right: -72px;
+      border: 3px solid black;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box"> </div>
+    <div class="box"></div>
+    <div class="meta">
+
+      <div class="meta-title"> META</div>
+
+    </div>
+  </div>
+</body>
+
+</html>
