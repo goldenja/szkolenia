@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="http://localhost:3000/profile" method="POST">
+        <label for="name">Choose your favourite browser</label>
+        <input list="browsers" name="name" id="name" />
+
+        <datalist id="browsers">
+            <option>Edge</option>
+            <option>Firefox</option>
+            <option>Chrome</option>
+            <option>Opera</option>
+            <option>Safari</option>
+        </datalist> 
+
+        <!-- <datalist id="browsers">
+            <option value="AL">Edge</option>
+            <option value="AK">Firefox</option>
+            <option value="AZ">Chrome</option>
+            <option value="AR">Opera</option>
+        </datalist> -->
+
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

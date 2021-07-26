@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- https://materializecss.com/getting-started.html -->
+
+  <form action="#">
+    <p>
+      <label>
+        <input type="checkbox" />
+        <span>Red</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" checked="checked" />
+        <span>Yellow</span>
+      </label>
+    </p>
+    <p>
+    <div class="switch">
+      <label>
+        Off
+        <input type="checkbox">
+        <span class="lever"></span>
+        On
+      </label>
+    </div>
+    </p>
+    <p>
+    <div class="chips chips-placeholder"></div>
+    </p>
+    <p>
+      <input type="text" class="datepicker">
+    </p>
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">mode_edit</i>
+        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+        <label for="icon_prefix2">First Name</label>
+      </div>
+    </div>
+  </form>
+
+
+  <script>
+
+    (function () {
+
+      M.AutoInit();
+
+      $('.chips-placeholder').chips({
+        placeholder: 'Enter a tag',
+        secondaryPlaceholder: '+Tag',
+      });
+
+      $(document).ready(function () {
+        $('.datepicker').datepicker();
+      });
+
+
+    })();
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            display: flex;
+            --s: 60px;
+            width: var(--s);
+            height: var(--s);
+            border-radius: 50%;
+            position: absolute;
+
+        }
+
+        .inner {
+            margin: auto;
+            --s: 30px;
+            width: var(--s);
+            height: var(--s);
+            border-radius: 50%;
+            background-color: orange;
+            z-index: 100; 
+        }
+
+        .alfa {
+            background-color: crimson;
+            top: 30px;
+            left: 5px;
+            z-index: 30; 
+        }
+
+        .beta {
+            background-color: slateblue;
+            left: 25px;
+            z-index: 20; 
+        }
+
+        .gamma {
+            top: 30px;
+            left: 45px;
+            background-color: mediumseagreen;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box alfa">
+        <div class="inner"></div>
+    </div>
+    <div class="box beta">
+        <div class="inner"></div>
+    </div>
+    <div class="box gamma">
+        <div class="inner"></div>
+    </div>
+
+</body>
+
+</html>
