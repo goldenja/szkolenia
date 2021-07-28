@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form__validate {
+            background-size: 25px;
+            background-position: right 5px center;
+            background-repeat: no-repeat;
+        }
+
+        .form__validate--focused:focus:invalid {
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/5144/ios7-close-empty.svg");
+        }
+
+        .form__validate--focused:focus:valid {
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/5144/ios7-checkmark-empty.svg");
+        }
+
+        .form__validate--blurred:not(:focus):invalid {
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/5144/ios7-close-empty.svg");
+        }
+
+        .form__validate--blurred:not(:focus):valid {
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/5144/ios7-checkmark-empty.svg");
+        }
+
+
+        /* Stylistic, feel free to ignore below this line */
+        body {
+            font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        form {
+            margin: 10rem 0;
+        }
+
+        .form__field-group {
+            max-width: 30%;
+            margin: 1.5em;
+        }
+
+        .form__label {
+            display: block;
+            font-weight: bold;
+            line-height: 2;
+        }
+
+        .form__text {
+            width: 100%;
+            padding: 0 .25em;
+            line-height: 1.5;
+            font-family: inherit;
+            font-size: inherit;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <strong>Validate while the customer is focused on the fields</strong>
+        <div class="form__field-group">
+            <label class="form__label">Name</label>
+            <input class="form__text form__validate form__validate--focused" required>
+        </div>
+
+        <div class="form__field-group">
+            <label class="form__label">E-Mail</label>
+            <input class="form__text form__validate form__validate--focused" type="email" required>
+        </div>
+    </form>
+
+    <form>
+        <strong>Show valid status when the customer is not focused on the fields</strong>
+        <div class="form__field-group">
+            <label class="form__label">Name</label>
+            <input class="form__text form__validate form__validate--blurred" required>
+        </div>
+
+        <div class="form__field-group">
+            <label class="form__label">E-Mail</label>
+            <input class="form__text form__validate form__validate--blurred" type="email" required>
+        </div>
+    </form>
+</body>
+
+</html>

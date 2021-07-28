@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn:enabled {
+            box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+                0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+        }
+
+        .btn:disabled {
+            background-color: lightgray;
+            color: #2a2a2a;
+        }
+
+
+        /* Example styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2a2a2a;
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-flex;
+            margin: 0 4px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+
+            font-family: sans-serif;
+            font-size: 16px;
+
+            background-color: #2196f3;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background-color: #d21928;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 
+    <input type="text" name="test" disabled> -->
+
+    <button class="btn">Active button</button>
+    <button class="btn" disabled>Disabled button</button>
+</body>
+
+</html>
