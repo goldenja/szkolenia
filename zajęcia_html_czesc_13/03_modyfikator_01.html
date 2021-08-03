@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f9f9fd;
+        }
+
+        /* Base styles  */
+        .alert {
+            max-width: 400px;
+            border-radius: 4px;
+            padding: 20px;
+            font-size: 16px;
+            color: #2a2a2a;
+            background-color: #fff;
+            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+            /*  Example styles  */
+            margin: 10px;
+        }
+
+        /* Modifiers */
+        .alert--success {
+            background-color: #388e3c;
+            color: #fff;
+        }
+
+        .alert--error {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        .alert--warning {
+            background-color: #ffc107;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="alert">You have new unread messages.</div>
+    <div class="alert alert--success">Transaction completed successfully.</div>
+    <div class="alert alert--error">Transaction error.</div>
+    <div class="alert alert--warning">The site is undergoing maintenance.</div>
+</body>
+
+</html>

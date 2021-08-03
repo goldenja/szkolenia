@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            line-height: 1.5;
+            background-color: #f9f9fd;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #2196f3;
+        }
+
+        .page-header__logo {
+            /* margin-right: 50px; */
+        }
+
+        .logo {
+            display: inline-flex;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .nav {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .nav__item:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .nav__link {
+            display: block;
+            padding: 15px 30px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .page-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            background-color: #607d8b;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="page-header">
+        <a class="logo page-header__logo" href="">Takworld</a>
+        <ul class="nav">
+            <li class="nav__item"><a class="nav__link" href="">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
+            <li class="nav__item"><a class="nav__link" href="">Gallery</a></li>
+        </ul>
+    </header>
+
+    <main></main>
+
+    <footer class="page-footer">
+        <a class="logo" href="">Takworld</a>
+    </footer>
+</body>
+
+</html>
