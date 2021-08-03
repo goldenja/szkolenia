@@ -1,0 +1,19 @@
+.button-success, .button-error {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  background-color: gray;
+}
+
+.button-success {
+  background-color: green;
+}
+
+.button-error {
+  background-color: red;
+}
+/*# sourceMappingURL=main2.css.map */

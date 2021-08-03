@@ -1,0 +1,11 @@
+.section {
+  width: 100%;
+
+  &__title {
+    color: red;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}

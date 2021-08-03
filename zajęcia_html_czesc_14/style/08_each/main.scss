@@ -1,0 +1,21 @@
+.dog-icon {
+    background-image: url('../images/dog.png');
+  }
+  
+  .cat-icon {
+    background-image: url('../images/cat.png');
+  }
+  
+  .bird-icon {
+    background-image: url('../images/bird.png');
+  }
+  
+  .turtle-icon {
+    background-image: url('../images/turtle.png');
+  }
+
+//   @each $animal in dog, cat, bird, turtle {
+//     .#{$animal}-icon {
+//       background-image: url('../images/#{$animal}.png');
+//     }
+//   }

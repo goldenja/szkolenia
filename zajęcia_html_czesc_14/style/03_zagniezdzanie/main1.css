@@ -1,0 +1,12 @@
+.section {
+  width: 100%;
+}
+
+.section .title {
+  color: red;
+}
+
+.section .text {
+  font-size: 14px;
+}
+/*# sourceMappingURL=main1.css.map */
