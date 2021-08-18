@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* img {
+            width: 300px;
+        }
+
+        @media screen and (min-width: 900) {
+            img {
+                width: 600px;
+            }
+        }  */
+    </style>
+
+</head>
+
+<body>
+    <img src="./images/300x300.png"
+        srcset="./images/300x300.png 300w, ./images/600x600.png 600w, ./images/900x900.png 900w" alt="Cute puppy"
+        sizes="(min-width: 900px) 600px, 300px">
+
+    <!-- <img srcset="size-1.jpg 400w,
+    size-2.jpg 800w,
+    size-3.jpg 1200w"
+        sizes="(max-width: 600px) calc(100vw - 30px), (max-width: 1200px) calc(50vw - 30px), calc(33.33vw - 30px)" /> -->
+</body>
+
+</html>

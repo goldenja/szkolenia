@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAUE,AAAA,GAAG,CAAC;EACF,KAAK,EAAC,KAAK;EACX,MAAM,EAAC,KAAK;EACZ,gBAAgB,EAAC,iBAAiB;CAMnC;;AAlBC,MAAM,CACN,MAAM,OAAO,6BAA6B,EAAE,CAAC,GAAG,MAAM,MAAM,cAAc,EAAE,MAAM,GAAG,MAAM,MAAM,cAAc,EAAE,KAAK;EAQxH,AAAA,GAAG,CAAC;IAMA,gBAAgB,EAAC,oBAAoB;IACrC,eAAe,EAAE,WAAW;GAE/B",
+    "sources": [
+        "03_responsive_background_03.scss"
+    ],
+    "names": [],
+    "file": "03_responsive_background_03.css"
+}
