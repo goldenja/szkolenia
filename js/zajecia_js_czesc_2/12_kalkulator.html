@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Kalkulator
+
+    <script type="text/javascript">
+
+        let pierwszaLiczba;
+        let drugaLiczba;
+        let dzialanie;
+
+        do {
+            pierwszaLiczba = Number(prompt("Podaj pierwsza liczbę:"));
+
+        } while (Number.isNaN(pierwszaLiczba))
+
+        do {
+            drugaLiczba = Number(prompt("Podaj drugą liczbę:"));
+
+        } while (Number.isNaN(drugaLiczba))
+
+
+        let validDzialanie = false
+
+        do {
+            dzialanie = prompt("Podaj działanie:");
+
+            if (dzialanie && dzialanie.length < 2 && "+-*/".includes(dzialanie)) {
+                validDzialanie = true;
+            }
+
+        } while (!validDzialanie)
+
+        let wynik;
+
+        switch (dzialanie) {
+            case '+':
+                wynik = pierwszaLiczba + drugaLiczba
+                break
+            case '-':
+                wynik = pierwszaLiczba - drugaLiczba
+                break
+            case '*':
+                wynik = pierwszaLiczba * drugaLiczba
+                break
+            case '/':
+                wynik = pierwszaLiczba / drugaLiczba
+                break1
+        }
+
+        console.log("Wynik: ", wynik);
+
+
+    </script>
+</body>
+
+</html>
