@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        /*
+   * Working with a collection of cards in trello
+   * - The splice () method
+   * - Delete
+   * - Add
+   * - Update
+   */
+
+        const cards = [
+            'Card-1',
+            'Card-2',
+            'Card-3',
+            'Card-4',
+            'Card-5',
+        ];
+
+        console.table(cards);
+
+        /*
+         * Delete (by index), indexOf () method
+         */
+
+        const cardToRemove = 'Card-3';
+        const index = cards.indexOf(cardToRemove);
+        console.log(index);
+
+        cards.splice(index, 1);
+
+        console.table(cards);
+
+        /*
+         * Adding (by index)
+         */
+        // const cardToInsert = 'Card-6';
+        // const index = 3;
+
+        // cards.splice(index, 0, cardToInsert);
+        // console.table(cards);
+
+        /*
+         * Update (by index)
+         */
+        // const cardToUpdate = 'Card-4';
+        // const index = cards.indexOf(cardToUpdate);
+
+        // console.log(index);
+
+        // cards.splice(index, 1, 'Updated card-4');
+
+        // console.table(cards);
+
+
+    </script>
+</body>
+
+</html>

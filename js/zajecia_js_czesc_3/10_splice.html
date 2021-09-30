@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const scores = [1, 2, 3, 4, 5];
+
+        // Usuń trzy elementy tablicy, zaczynając od pierwszego elementu (indeks 0)
+        const deletedScores = scores.splice(0, 3);
+
+        // Tablica scores zawiera teraz dwa elementy
+        console.log(scores); // [4, 5]
+
+        // Tablica deletedScores zawiera trzy usunięte elementy
+        console.log(deletedScores); // [1, 2, 3]
+
+        // const colors = ["red", "green", "blue"];
+
+        // colors.splice(2, 0, "purple");
+        // console.log(colors); // ["red", "green", "purple", "blue"]
+
+        // const colors = ["red", "green", "blue"];
+
+        // colors.splice(1, 0, "yellow", "pink");
+        // console.log(colors); // ["red", "yellow", "pink", "green", "blue"
+
+        // const languages = ["C", "C++", "Java", "JavaScript"];
+
+        // // Zmieniamy element o indeksie 1 na nowy
+        // languages.splice(1, 1, "Python");
+        // console.log(languages); // ["C", "Python", "Java", "JavaScript"]
+
+        // // Zmieniamy jeden element (z indeksem 2) na kilka
+        // languages.splice(2, 1, "C#", "Swift", "Go");
+        // console.log(languages); // ["C", "Python", "C#", "Swift", "Go", "JavaScript"]
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const a = ["Mango"];
+        // Ponieważ a to jest array, w b zapisuję się link na już istniejący
+        // array w pamięci. Teraz a i b wskazują na ten sam array.
+        const b = a;
+        console.log(a); // ["Mango"]
+        console.log(b); // ["Mango"]
+
+        // Zmieńmy array, dodając jeszcze jeden element wykorzystując wskaźnik z a
+        a.push("Poly");
+        console.log(a); // ["Mango", "Poly"]
+
+        // b też się zmieniło, ponieważ b, jak i a,
+        // po prostu zawiera link na to samo miejsce w pamięci
+        console.log(b); // ["Mango", "Poly"]
+
+        // Rezultat powtarza się
+        b.push("Ajax");
+        console.log(a); // ["Mango", "Poly", "Ajax"]
+        console.log(b); // ["Mango", "Poly", "Ajax"]
+    </script>
+</body>
+
+</html>

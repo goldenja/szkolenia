@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const input = "Ala ma kota";
+
+
+
+
+
+
+
+
+
+
+        
+        let znalezioneLitery = [];
+        let iloscWystapienLitery = [];
+
+        for (let i=0 ; i< input.length;i++)
+        {
+            const badanaLitera = input[i].toLowerCase();
+            const index = znalezioneLitery.indexOf(badanaLitera);
+
+            if(index === -1)
+            {
+                znalezioneLitery.push(badanaLitera);
+                iloscWystapienLitery.push(1);
+            }
+            else
+            {
+                iloscWystapienLitery[index] += 1;
+            }
+        }
+
+        console.log(znalezioneLitery);
+        console.log(iloscWystapienLitery);
+
+
+
+    </script>
+</body>
+
+</html>

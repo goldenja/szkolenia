@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const string = 'qWeRTzxCv';
+
+
+
+
+
+
+
+
+
+
+
+        
+        const letters = string.split('');
+        let invertedString = '';
+
+        console.log(letters);
+
+        for (const letter of letters) {
+
+            const isEqual = letter === letter.toLowerCase();
+
+            invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
+        }
+
+        console.log('invertedString: ', invertedString);
+
+    </script>
+</body>
+
+</html>
