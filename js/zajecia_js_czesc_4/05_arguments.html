@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+        function multiply() {
+            let total = 1;
+
+            for (const argument of arguments) {
+                total *= argument;
+            }
+
+
+            //const args = Array.from(arguments);
+
+            return total;
+        }
+
+        console.log(multiply(1, 2, 3)); //  6
+        console.log(multiply(1, 2, 3, 4)); //  24
+        console.log(multiply(1, 2, 3, 4, 5)); //  120
+    </script>
+</body>
+
+</html>

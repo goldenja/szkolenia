@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        function withdraw(amount, balance) {
+            if (amount === 0) {
+                console.log("Dla operacji wprowadź kwotę większą od zera");
+            } else if (amount > balance) {
+                console.log("Za mało środków na koncie");
+            } else {
+                console.log("Operacja wypłaty powiodła się");
+            }
+        }
+
+        withdraw(0, 300); // "Dla operacji wprowadź kwotę większą od zera"
+        withdraw(500, 300); // "Za mało środków na koncie"
+        withdraw(100, 300); // "Operacja wypłaty powiodła się"
+
+
+        // function withdraw(amount, balance) {
+        //     // Jeśli warunek jest wykonany, wywoływany jest console.log
+        //     // i wyjście z funkcji. Kod następujący po ciele if nie zostanie wykonany.
+        //     if (amount === 0) {
+        //         console.log("Dla operacji wprowadź kwotę większą od zera");
+        //         return;
+        //     }
+
+        //     // Jeśli warunek pierwszego if nie jest wykonany, jego ciało jest pomijane
+        //     // a interpreter przechodzi do drugiego if.
+        //     // Jeśli warunek jest wykonany, wywoływany jest console.log i wyjście z funkcji.
+        //     // Kod następujący po ciele if nie zostanie wykonany.
+        //     if (amount > balance) {
+        //         console.log("Za mało środków na koncie");
+        //         return;
+        //     }
+
+        //     // Jeśli żaden z poprzednich if nie został wykonany,
+        //     // interpreter dostaje się do tego kodu i wykonuje go.
+        //     console.log("Operacja wypłaty zakończona");
+        // }
+
+
+    </script>
+</body>
+
+</html>

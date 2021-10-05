@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const szukanelitery = "aal";
+        const slownik = ["Ala", "Ula", "Bat", "aL"];
+        const znomarlizowanySłownik = normalizujDane(slownik);
+
+        przeszukajSlownik ();
+
+        function normalizujDane(dane) {
+            let znomalizowaneDane = dane.join("-").toLowerCase();
+            return znomalizowaneDane.split("-");
+        }
+        
+        function przeszukajSlownik() {
+            for (let i = 0; i < slownik.length; i++) {
+                let analizowaneSlowo = znomarlizowanySłownik[i];
+
+                for (let j = 0; j < szukanelitery.length; j++) {
+                    const character = szukanelitery[j];
+                    const indexOf = analizowaneSlowo.indexOf(character);
+                    if (indexOf >= 0) {
+                        analizowaneSlowo = analizowaneSlowo.replace(character, "");
+                        if (analizowaneSlowo.length == 0) { break; }
+                    }
+                }
+
+                if (analizowaneSlowo.length == 0) {
+                    console.log(slownik[i]);
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
