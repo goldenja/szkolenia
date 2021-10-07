@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const books = [
+            {
+                title: "The Last Kingdom",
+                author: "Bernard Cornwell",
+                rating: 8.38,
+            },
+            {
+                title: "Beside Still Waters",
+                author: "Robert Sheckley",
+                rating: 8.51,
+            },
+            {
+                title: "Sen śmiesznego człowieka",
+                author: "Fiodor Dostojewski",
+                rating: 7.75,
+            },
+        ];
+
+        for (const book of books) {
+            // Obiekt książki
+            console.log(book);
+            // Tytuł
+            console.log(book.title);
+            // Autor
+            console.log(book.author);
+            // Ocena
+            console.log(book.rating);
+        }
+        
+    </script>
+</body>
+
+</html>

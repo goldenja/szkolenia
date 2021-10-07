@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const user = {
+            name: "Jacques Gluke",
+            tag: "jgluke",
+            location: {
+                country: "Jamaica",
+                city: "Ocho Rios",
+            },
+            hobbies: ["swiming", "music", "sci-fi"],
+        };
+
+        const location = user.location;
+        console.log(userLocation); // Obiekt location
+
+        const country = user.location.country;
+        console.log(country); // 'Jamaica'
+
+        const hobbies = user.hobbies;
+        console.log(hobbies); // ['swiming', 'music', 'sci-fi']
+
+        const firstHobby = user.hobbies[0];
+        console.log(firstHobby); // 'swiming'
+
+        const numberOfHobbies = user.hobbies.length;
+        console.log(numberOfHobbies); // 3
+
+    </script>
+</body>
+
+</html>

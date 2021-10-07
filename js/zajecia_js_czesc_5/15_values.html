@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const goods = {
+            apples: 6,
+            grapes: 3,
+            bread: 4,
+            cheese: 7,
+        };
+
+        const values = Object.values(goods); // [6, 3, 4, 7]
+
+        let total = 0;
+
+        for (const value of values) {
+            total += value;
+        }
+
+        console.log(total); // 20
+
+    </script>
+</body>
+
+</html>

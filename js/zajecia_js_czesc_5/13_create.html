@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const animal = {
+            legs: 4,
+        };
+
+        const dog = Object.create(animal);
+
+        dog.name = "Mango";
+
+        console.log(dog);
+
+        console.log(dog.hasOwnProperty("name")); // true
+        console.log(dog.hasOwnProperty("legs")); // false
+
+        // for (const key in dog) {
+            
+        //     if (dog.hasOwnProperty(key)) {
+        //         console.log(key);
+        //         console.log(book[key]);
+        //     }
+        // }
+
+    </script>
+</body>
+
+</html>
