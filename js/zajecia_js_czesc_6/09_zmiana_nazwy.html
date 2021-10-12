@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const firstBook = {
+            title: "The Last Kingdom",
+            coverImage:
+                "https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg",
+        };
+
+        const {
+            title: firstTitle,
+            coverImage: firstCoverImage = "https://via.placeholder.com/640/480",
+        } = firstBook;
+
+        console.log(firstTitle); // The Last Kingdom
+        console.log(firstCoverImage); // https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg
+
+        const secondBook = {
+            title: "Sen śmiesznego człowieka",
+        };
+
+        const {
+            title: secondTitle,
+            coverImage: secondCoverImage = "https://via.placeholder.com/640/480",
+        } = secondBook;
+
+        console.log(secondTitle); // Sen śmiesznego człowieka
+        console.log(secondCoverImage); // https://via.placeholder.com/640/480
+    </script>
+</body>
+
+</html>

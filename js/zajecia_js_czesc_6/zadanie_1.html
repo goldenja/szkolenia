@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Do stworzenia jest obiekt FabrykaSamochodow.
+    Obiekt powinien posiadać metodę stworzSamochód(wersja).
+    Wersja - to nazwa wybranej konfikuracji dostępne ["Basic", "Silver", "Gold" , "Diamond"]
+    Metoda powinna zwracać obiekt Samochód różny w zależności od wybranej wersji z właściwościami takimi jak kolor,
+    silnik, tapicerka, oraz wyposażenie dodatkowe.
+    Wyposażenie dodatkowe powinno być tablicą.
+
+    <script>
+
+const fabrykaSamochodow = {
+            samochod: {
+                kolor: 'Srebrny',
+                silnik: '1.0',
+                tapicerka: 'materiałowa',
+                wyposazenieDodatkowe: ['Brak']
+            },
+
+            version: {
+                Basic: {
+                            kolor: { value: 'Czerwony' },
+                            silnik: { value: '1.2' },
+                            tapicerka: { value: 'materiałowa' },
+                            wyposazenieDodatkowe: { value: ['Coś dodatkowego', 'i coś jeszcze'] }
+                        },
+                Silver : {
+                            kolor: { value: 'Zielony' },
+                            silnik: { value: '1.6' },
+                            tapicerka: { value: 'welurowa' },
+                            wyposazenieDodatkowe: { value: ['Coś fajnego', 'i coś jeszcze'] }
+                        },
+                Gold:  {
+                            kolor: { value: 'Niebieski' },
+                            silnik: { value: '2.0' },
+                            tapicerka: { value: 'z alcantry' },
+                            wyposazenieDodatkowe: { value: ['Coś extra', 'i coś jeszcze'] }
+                        },
+                Diamond: {
+                            kolor: { value: 'Czarny' },
+                            silnik: { value: '5.0' },
+                            tapicerka: { value: 'skórzana' },
+                            wyposazenieDodatkowe: { value: ['Totalny wypas', 'i coś jeszcze'] }
+                        },
+            },
+            stworzSamochod(wersja) {
+               return Object.create(this.samochod, this.version[wersja]);
+            }
+        }
+
+        console.log (fabrykaSamochodow.stworzSamochod('Diamond'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const book = {
+            title: "The Last Kingdom",
+            author: "Bernard Cornwell",
+            genres: ["historical prose", "adventure"],
+            isPublic: true,
+            rating: 8.38,
+        };
+
+        // Destrukturyzacja
+        const { title, author, isPublic, rating, coverImage } = book;
+        console.log(coverImage); // undefined
+
+        const accessType = isPublic ? "publiczny" : "zamknięty";
+        const message = `Książka ${title} autorstwa ${author} z oceną ${rating} ma dostęp w ${accessType}.`;
+
+    </script>
+</body>
+
+</html>

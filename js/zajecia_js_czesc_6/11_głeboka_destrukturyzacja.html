@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+
+
+        const user = {
+            name: "Jacques Gluke",
+            tag: "jgluke",
+            stats: {
+                followers: 5603,
+                views: 4827,
+                likes: 1308,
+            },
+        };
+
+        const {
+            name,
+            tag,
+            stats: { followers, views: userViews, likes: userLikes = 0 },
+        } = user;
+
+        console.log(name); // Jacques Gluke
+        console.log(tag); // jgluke
+        console.log(followers); // 5603
+        console.log(userViews); // 4827
+        console.log(userLikes); // 1308
+
+    </script>
+</body>
+
+</html>

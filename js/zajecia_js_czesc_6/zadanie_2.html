@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Do wcześniej utworzonej Fabryki samochodów proszę o dołożenie metodę:
+    - podajCene(wersja) - pokazuje cene całkowitą oraz cenę w rozbiciu o cechy samochodu takie jak kolor , silnik i wyposazenie dodatkowe
+    Przykład:
+      FabrykaSamochodow.podajCene("Basic");
+    Wynik:
+    Całkowita cena 26 tys
+    Cena za kolor szary : 2 tys
+    Cena za silnik : 15 tys
+    Cena za wyposazenie dodatkowe:
+        radio: 2 tys,
+        abs: 1 tys,
+        klimatyzacja 4 tys,
+        felgi stalowe: 2 tys
+
+    <script>
+
+const fabrykaSamochodow = {
+            samochod: {
+                kolor: 'Srebrny',
+                silnik: '1.0',
+                tapicerka: 'materiałowa',
+                wyposazenieDodatkowe: ['Brak']
+            },
+
+            version: {
+                Basic: {
+                            kolor: { value: 'Czerwony' },
+                            silnik: { value: '1.2' },
+                            tapicerka: { value: 'materiałowa' },
+                            wyposazenieDodatkowe: { value: ['Abs', 'Lusterka'] }
+                        },
+                Silver : {
+                            kolor: { value: 'Zielony' },
+                            silnik: { value: '1.6' },
+                            tapicerka: { value: 'materiałowa' },
+                            wyposazenieDodatkowe: { value: ['Abs', 'Lusterka', 'Klimatyzacja'] }
+                        },
+                Gold:  {
+                            kolor: { value: 'Niebieski' },
+                            silnik: { value: '2.0' },
+                            tapicerka: { value: 'materiałowa' },
+                            wyposazenieDodatkowe: { value: ['Abs', 'Lusterka', 'Klimatyzacja automatyczne'] }
+                        },
+                Diamond: {
+                            kolor: { value: 'Czarny' },
+                            silnik: { value: '5.0' },
+                            tapicerka: { value: 'skórzana' },
+                            wyposazenieDodatkowe: { value: ['Abs', 'Elektryczne lusterka', 'Klimatyzacja automatyczne'] }
+                        },
+            },
+            stworzSamochod(wersja) {
+               return Object.create(this.samochod, this.version[wersja]);
+            },
+            cennik : {
+                kolor : {
+                    'Czerwony':1,
+                    'Zielony': 2,
+                    'Niebieski' : 3,
+                    'Czarny': 4
+                },
+                silnik : {
+                    '1.2' : 10,
+                    '1.6' : 13,
+                    '2.0' : 20,
+                    '5.0' : 30,
+                },
+                tapicerka : {
+                    'materiałowa' : 5,
+                    'skórzana' : 15
+                },
+                wyposazenieDodatkowe : {
+                    'Abs' : 2,
+                    'Elektryczne lusterka':3, 
+                    'Klimatyzacja automatyczne':6,
+                    'Lusterka':1, 
+                    'Klimatyzacja':4
+                }
+            },
+            podajCene(wersja) {
+                    let nowySamochod = this.stworzSamochod(wersja);
+                    let cenaCalkowita = 0;
+                   
+                    for (const key of Object.getOwnPropertyNames(nowySamochod)) {
+               
+                        if (Array.isArray(nowySamochod[key]))
+                        {
+                            for (let elem of nowySamochod[key])
+                            {
+                                cenaCalkowita += this.cennik[key][elem];
+                            }
+                        }
+                        else
+                        {
+                            cenaCalkowita += this.cennik[key][nowySamochod[key]];
+                        }
+                    }
+
+                    return cenaCalkowita;
+                }
+        }
+
+        console.log (fabrykaSamochodow.stworzSamochod('Diamond'));
+        console.log (fabrykaSamochodow.podajCene('Diamond'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        'use strict';
+      const FabrykaSamochodow = {
+        wyposażenie: ["radio", "abs", "klimatyzacja", "felgi stalowe"],
+        stworzSamochod(wersja) {
+          let samochod;
+           switch (wersja) {
+            case 'Diamond':
+                samochod = {
+                kolor: 'czerwony',
+                silnik: '3.9l V8 turbo 171KM',
+                tapicerka: 'skóra',
+                wyposażenieDodatkowe: this.wyposażenie,
+              };break;
+            case 'Gold':
+               samochod = {
+                kolor: 'niebieski',
+                silnik: '2.5l 5-cyl. turbo 150KM',
+                tapicerka: 'skóra syntetyczna',
+                wyposażenieDodatkowe: this.wyposażenie.slice(0,3),
+              };break;
+            case 'Silver':
+               samochod = {
+                kolor: 'czarny',
+                silnik: '1.4l T-Jet 120KM',
+                tapicerka: 'welurowa',
+                wyposażenieDodatkowe: this.wyposażenie.slice(0,2),
+              };break;
+            case 'Basic':
+               samochod = {
+                kolor: 'srebrny',
+                silnik: '1.3l 92KM',
+                tapicerka: 'materiałowa',
+                wyposażenieDodatkowe: this.wyposażenie.slice(1, 2),
+              };break;
+          }; return samochod;
+        }
+      }
+    </script>
+</body>
+</html>
