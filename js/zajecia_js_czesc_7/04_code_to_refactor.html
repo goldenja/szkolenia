@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        function processCall(recipient) {
+            // Symuluj dostępność abonenta za pomocą liczby losowej
+            const isRecipientAvailable = Math.random() > 0.5;
+
+            if (!isRecipientAvailable) {
+                console.log(`Abonent ${recipient} jest niedostępny, zostaw wiadomość.`);
+                // Logika aktywacji automatycznej sekretarki
+            } else {
+                console.log(`Łączenie z ${recipient}, proszę czekać...`);
+                // Logika odbierania połączenia
+            }
+        }
+
+        processCall("Mango");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+        const numbers = [5, 10, 15, 20, 25];
+
+        // Deklaracja funkcji
+        numbers.forEach(function (number, index) {
+            console.log(`Indeks ${index}, wartość ${number}`);
+        });
+
+        // Anonimowa funkcja strzałkowa
+        numbers.forEach((number, index) => {
+            console.log(`Indeks ${index}, wartość ${number}`);
+        });
+
+    </script>
+</body>
+
+</html>

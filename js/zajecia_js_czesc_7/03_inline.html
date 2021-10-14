@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        function registerGuest(name, callback) {
+            console.log(`Rejestracja gościa ${name}.`);
+            callback(name);
+        }
+
+        // Przekaż funkcję inline greet jako wywołanie zwrotne
+        registerGuest("Mango", function greet(name) {
+            consle.log(`Pozdrawiam ${name}.`);
+        });
+
+        // Przekaż funkcję inline notify jako wywołanie zwrotne
+        registerGuest("Poly", function notify(name) {
+            consle.log(`Szanowny(a) ${name}, Pana/Pani numer będzie gotowy za 30 minut.`);
+        });
+
+    </script>
+</body>
+
+</html>
