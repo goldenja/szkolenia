@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const students = [
+            { name: "Mango", score: 83, courses: ["matematyka", "fizyka"] },
+            { name: "Poly", score: 59, courses: ["informatyka", "matematyka"] },
+            { name: "Ajax", score: 37, courses: ["fizyka", "biologia"] },
+            { name: "Kiwi", score: 94, courses: ["literatura", "informatyka"] },
+        ];
+
+        //Musisz posortować tablicę ich imion w porządku rosnącym według wyników testów
+
+        const sortedByAscendingScore = [...students].sort((a, b) => a.score - b.score);
+        const names = sortedByAscendingScore.map(student => student.name);
+
+        console.log(names); // ['Ajax', 'Poly', 'Mango', 'Kiwi']
+
+
+
+
+
+        // const names = [...students]
+        //     .sort((a, b) => a.score - b.score)
+        //     .map(student => student.name);
+
+        // console.log(names); // ['Ajax', 'Poly', 'Mango', 'Kiwi']
+
+    </script>
+
+
+</body>
+
+</html>

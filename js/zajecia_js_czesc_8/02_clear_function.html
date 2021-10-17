@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+        const pureMultiply = (array, value) => {
+            const newArray = [];
+
+            array.forEach(element => {
+                newArray.push(element * value);
+            });
+
+            return newArray;
+        };
+
+        const numbers = [1, 2, 3, 4, 5];
+        const doubledNumbers = pureMultiply(numbers, 2);
+
+        // Nie było mutacji oryginalnych danych
+        console.log(numbers); // [1, 2, 3, 4, 5]
+        // Funkcja zwróciła nową tablicę ze zmienionymi danymi
+        console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+    </script>
+</body>
+
+</html>

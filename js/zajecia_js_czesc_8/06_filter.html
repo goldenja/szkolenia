@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        tablica.filter((element, index, array) => {
+            // Ciało funkcji wywołania zwrotnego
+        });
+
+        const values = [51, -3, 27, 21, -68, 42, -37];
+
+        const positiveValues = values.filter(value => value >= 0);
+        console.log(positiveValues); // [51, 27, 21, 42]
+
+        const negativeValues = values.filter(value => value < 0);
+        console.log(negativeValues); // [-3, -68, -37]
+
+        const bigValues = values.filter(value => value > 1000);
+        console.log(bigValues); // []
+
+        // Oryginalna tablica się nie zmieniła
+        console.log(values); // [51, -3, 27, 21, -68, 42, -37]
+
+    </script>
+</body>
+
+</html>

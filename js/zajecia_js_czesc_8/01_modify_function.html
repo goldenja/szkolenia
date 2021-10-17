@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const dirtyMultiply = (array, value) => {
+            for (let i = 0; i < array.length; i += 1) {
+                array[i] = array[i] * value;
+            }
+        };
+
+        const numbers = [1, 2, 3, 4, 5];
+        dirtyMultiply(numbers, 2);
+        // Zdarzyła się mutacja oryginalnych danych - tablicy numbers
+        console.log(numbers); // [2, 4, 6, 8, 10]
+        
+    </script>
+</body>
+
+</html>

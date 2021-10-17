@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const students = [
+            { name: "Mango", score: 83, courses: ["matematyka", "fizyka"] },
+            { name: "Poly", score: 59, courses: ["informatyka", "matematyka"] },
+            { name: "Ajax", score: 37, courses: ["fizyka", "biologia"] },
+            { name: "Kiwi", score: 94, courses: ["literatura", "informatyka"] },
+        ];
+
+        //Uzyskajmy posortowaną alfabetycznie tablicę unikalnych odwiedzonych przedmiotów.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        const uniqueSortedCourses = students
+            .flatMap(student => student.courses)
+            .filter((course, index, array) => array.indexOf(course) === index)
+            .sort((a, b) => a.localeCompare(b));
+
+        console.log(uniqueSortedCourses); // ['biologia', 'informatyka', 'literatura', 'matematyka', 'fizyka']
+
+    </script>
+
+
+</body>
+
+</html>

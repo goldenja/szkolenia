@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const tweets = [
+            { id: "000", likes: 5, tags: ["js", "nodejs"] },
+            { id: "001", likes: 2, tags: ["html", "css"] },
+            { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+            { id: "003", likes: 8, tags: ["css", "react"] },
+            { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+        ];
+
+        // Popatrzmy na wszystkie elementy kolekcji i dodajmy wartości właściwości likes
+        // do akumulatora, którego początkowa wartość wynosi 0.
+        const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+
+        console.log(likes); // 32
+
+        // Prawdopodobnie liczenie polubień nie jest pojedynczą operacją, więc napiszmy funkcję
+        // do zliczania polubień z kolekcji
+        const countLikes = tweets => {
+            return tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+        };
+
+        console.log(countLikes(tweets)); // 32
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const students = [
+            { name: "Mango", score: 83 },
+            { name: "Poly", score: 59 },
+            { name: "Ajax", score: 37 },
+            { name: "Kiwi", score: 94 },
+        ];
+
+        const inAscendingScoreOrder = students.sort(
+            (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+        );
+
+        const inDescendingScoreOrder = students.sort(
+            (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+        );
+
+        const inAlphabeticalOrder = students.sort((firstStudent, secondStudent) =>
+            firstStudent.name.localeCompare(secondStudent.name)
+        );
+
+    </script>
+
+
+</body>
+
+</html>

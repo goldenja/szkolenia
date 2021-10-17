@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const tweets = [
+            { id: "000", likes: 5, tags: ["js", "nodejs"] },
+            { id: "001", likes: 2, tags: ["html", "css"] },
+            { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+            { id: "003", likes: 8, tags: ["css", "react"] },
+            { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+        ];
+
+        const getTags = tweets =>
+            tweets.reduce((allTags, tweet) => {
+                allTags.push(...tweet.tags);
+
+                return allTags;
+            }, []);
+
+        const tags = getTags(tweets);
+
+        // "Wyniesiemy" funkcję wywołania zwrotnego osobno i do reducе przekażemy link do niej
+        // Jest to standardowa praktyka, jeśli funkcja wywołania zwrotnego jest dość duża.
+
+        // Jeśli obiekt-akumulator nie posiada własnej właściwości z kluczem tag,
+        // w takim razie utwórzmy go i zapiszmy mu wartość 0.
+        // W przeciwnym razie zwiększamy wartość o 1.
+        const getTagStats = (acc, tag) => {
+            if (!acc.hasOwnProperty(tag)) {
+                acc[tag] = 0;
+            }
+
+            // if (!acc[tag]) {
+            //     acc[tag] = 0;
+            // }
+
+            acc[tag] += 1;
+
+            return acc;
+        };
+
+        // Początkową wartością akumulatora jest pusty obiekt {}
+        const countTags = tags => tags.reduce(getTagStats, {});
+
+        const tagCount = countTags(tags);
+        console.log(tagCount);
+    </script>
+</body>
+
+</html>

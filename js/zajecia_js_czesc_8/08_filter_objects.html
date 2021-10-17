@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const LOW_SCORE = 50;
+        const HIGH_SCORE = 80;
+        const students = [
+            { name: "Mango", score: 83 },
+            { name: "Poly", score: 59 },
+            { name: "Ajax", score: 37 },
+            { name: "Kiwi", score: 94 },
+            { name: "Houston", score: 64 },
+        ];
+
+        const best = students.filter(student => student.score >= HIGH_SCORE);
+        console.log(best); // Tablica obiektów o nazwach Mango i Kiwi
+
+        const worst = students.filter(student => student.score < LOW_SCORE);
+        console.log(worst); // Tablica z jednym obiektem Ajax
+
+       
+        const average = students.filter(
+            ({ score }) => score >= LOW_SCORE && score < HIGH_SCORE
+        );
+        console.log(average); // Tablica obiektów o nazwach Poly i Houston
+    </script>
+</body>
+
+</html>
