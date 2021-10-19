@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+
+
+        // Czy kod jest dobrze napisany?
+        "use strict"
+        const counter = {
+            value: 0,
+            increment(value) {
+                this.value += value;
+            },
+            decrement(value) {
+                this.value -= value;
+            },
+        };
+
+        const updateCounter = function (value, operation) {
+            operation(value);
+        };
+
+        updateCounter(10, counter.increment);
+        updateCounter(5, counter.decrement);
+
+
+    </script>
+</body>
+
+</html>

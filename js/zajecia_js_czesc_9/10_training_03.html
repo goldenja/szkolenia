@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const book = {
+            title: 'React for beginners',
+            showThis() {
+                console.log('showThis -> this', this);
+            },
+            showTitle() {
+                console.log('showTitle -> this.title', this.title);
+            },
+        };
+
+        book.showThis(); // Which this ???
+
+        const outerShowThis = book.showThis;
+        outerShowThis(); // Which this ???
+
+    </script>
+</body>
+
+</html>

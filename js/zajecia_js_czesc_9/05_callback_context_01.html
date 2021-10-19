@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        //Kontekst wewnątrz strzałki jest określony przez miejsce jej deklaracji
+
+        const showThis = () => {
+            console.log("this in showThis: ", this);
+        };
+
+        showThis(); // this in showThis: window
+
+        const user = {
+            username: "Mango",
+        };
+        user.showContext = showThis;
+
+        user.showContext(); // this in showThis: window
+
+    </script>
+</body>
+
+</html>

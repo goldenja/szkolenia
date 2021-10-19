@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        function showThis() {
+            console.log("this in showThis: ", this);
+        }
+
+        // Wywołujemy w kontekście globalnym
+        showThis(); // this in showThis: Window
+
+        const user = {
+            username: "Mango",
+        };
+
+        // Zapisujemy link do funkcji do właściwości obiektu
+        // Zauważ, że to nie jest wywołanie - nie ()
+        user.showContext = showThis;
+
+        // Wywołaj funkcję w kontekście obiektu
+        // this wskaże na bieżący obiekt, w kontekście
+        // którego odbywa się wywołanie, a nie na obiekt globalny.
+        user.showContext(); // this in showThis: {username: "Mango", showContext: ƒ}
+
+    </script>
+</body>
+
+</html>
