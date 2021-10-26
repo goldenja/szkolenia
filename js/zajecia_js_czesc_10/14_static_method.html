@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        class User {
+            static #takenEmails = [];
+
+            static isEmailTaken(email) {
+                return User.#takenEmails.includes(email);
+            }
+
+            #email;
+
+            constructor({ email }) {
+                this.#email = email;
+                User.#takenEmails.push(email);
+            }
+        }
+
+        const mango = new User({ email: "mango@mail.com" });
+
+        console.log(User.isEmailTaken("poly@mail.com"));
+        console.log(User.isEmailTaken("mango@mail.com"));
+    </script>
+</body>
+
+</html>

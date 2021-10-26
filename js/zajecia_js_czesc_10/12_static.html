@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hejka
+
+
+    <script type="text/javascript">
+
+        class Animal {
+            speak() {
+                return this;
+            }
+            static eat() {
+                return this;
+            }
+        }
+
+        let obj = new Animal();
+        obj.speak(); // obiekt Animal
+        let speak = obj.speak;
+        speak(); // undefined
+
+        Animal.eat(); // klasa Animal
+        let eat = Animal.eat;
+        eat(); // undefined
+
+        // class User {
+        //     // Deklaracja i inicjalizacja właściwości statycznej
+        //     static Roles = {
+        //         ADMIN: "admin",
+        //         EDITOR: "editor",
+        //     };
+
+        //     #email;
+        //     #role;
+
+        //     constructor({ email, role }) {
+        //         this.#email = email;
+        //         this.#role = role;
+        //     }
+
+        //     get role() {
+        //         return this.#role;
+        //     }
+
+        //     set role(newRole) {
+        //         this.#role = newRole;
+        //     }
+        // }
+
+        // const mango = new User({
+        //     email: "mango@mail.com",
+        //     role: User.Roles.ADMIN,
+        // });
+
+        // console.log(mango.Roles); // undefined
+        // console.log(User.Roles); // { ADMIN: "admin", EDITOR: "editor" }
+
+        // console.log(mango.role); // "admin"
+        // mango.role = User.Roles.EDITOR;
+        // console.log(mango.role); // "editor"
+    </script>
+</body>
+
+</html>

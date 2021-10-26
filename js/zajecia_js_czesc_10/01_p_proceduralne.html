@@ -15,15 +15,17 @@
 
     <script type="text/javascript">
 
-      
-        const scores = [61, 19, 74, 35, 92, 56];
-        const ascendingScores = [...scores].sort();
+        const baseSalary = 30000;
+        const overtime = 10;
+        const rate = 20;
 
-        console.log(scores); // [61, 19, 74, 35, 92, 56]
-        console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+        const getWage = (baseSalary, overtime, rate) => {
+            return baseSalary + overtime * rate;
+        };
+
+        getWage(baseSalary, overtime, rate);
+
     </script>
-
-
 </body>
 
 </html>

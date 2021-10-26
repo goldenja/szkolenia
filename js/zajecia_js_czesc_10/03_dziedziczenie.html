@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        const animal = {
+            legs: 4,
+        };
+        const dog = Object.create(animal);
+        dog.name = "Mango";
+
+        console.log(dog); // { name: 'Mango', __proto__: animal }
+        console.log(animal.isPrototypeOf(dog)); // true
+
+        console.log(dog.hasOwnProperty("name")); // true
+        console.log(dog.name); // 'Mango'
+
+        console.log(dog.hasOwnProperty("legs")); // false
+        console.log(dog.legs); // 4
+
+        // const publication = {
+        //     title: 'Les Miserables',
+        //     publishedYear: 1861
+        // };
+
+        // const book = {
+        //     author: 'Victor Hugo',
+        //     publishedYear: 1862
+        // };
+
+        // Object.setPrototypeOf(book, publication);
+
+        // console.log(book.title); // Les Miserables
+        // console.log(book.publishedYear); // 1862
+
+    </script>
+</body>
+
+</html>

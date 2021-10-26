@@ -14,16 +14,18 @@
 
 
     <script type="text/javascript">
+        const employee = {
+            baseSalary: 30000,
+            overtime: 10,
+            rate: 20,
+            getWage() {
+                return this.baseSalary + this.overtime * this.rate;
+            },
+        };
 
-      
-        const scores = [61, 19, 74, 35, 92, 56];
-        const ascendingScores = [...scores].sort();
+        employee.getWage();
 
-        console.log(scores); // [61, 19, 74, 35, 92, 56]
-        console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
     </script>
-
-
 </body>
 
 </html>

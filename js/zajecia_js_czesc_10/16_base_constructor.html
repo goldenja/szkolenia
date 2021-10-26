@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        class User {
+
+            email;
+            constructor(email) {
+                this.email = email;
+            }
+
+            get email() {
+                return this.email;
+            }
+
+            set email(newEmail) {
+                this.email = newEmail;
+            }
+        }
+
+        class ContentEditor extends User {
+            constructor({ email, posts }) {
+                // Wywołanie konstruktora klasy nadrzędnej User
+                super(email);
+                this.posts = posts;
+            }
+        }
+
+        const editor = new ContentEditor({ email: "mango@mail.com", posts: [] });
+        console.log(editor); // { email: 'mango@mail.com', posts: [] }
+        console.log(editor.email); // 'mango@mail.com'
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hejka
+
+
+    <script type="text/javascript">
+
+        class User {
+            // Opcjonalna deklaracja właściwości publicznych
+            name;
+            // Obowiązkowa deklaracja właściwości prywatnych
+            #email;
+
+            constructor({ name, email }) {
+                this.name = name;
+                this.#email = email;
+            }
+
+            getEmail() {
+                return this.#email;
+            }
+
+            changeEmail(newEmail) {
+                this.#email = newEmail;
+            }
+        }
+
+        const mango = new User({
+            name: "Mango",
+            email: "mango@mail.com",
+        });
+        mango.changeEmail("mango@supermail.com");
+        console.log(mango.getEmail()); // mango@supermail.com
+       // console.log(mango.#email); //  Wystąpi błąd, to jest właściwość prywatna
+
+    </script>
+</body>
+
+</html>
