@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const squareNumber = num => Math.pow(num, 2);
+        numbers.forEach(squareNumber)
+
+        console.log(numbers);
+
+        const words = ['hello', 'bird', 'table', 'football', 'pipe', 'code'];
+        const capWords = words.forEach(capitalize);
+
+        function capitalize(word, index, arr) {
+            arr[index] = word[0].toUpperCase() + word.substring(1);
+        }
+
+        console.log(words);
+
+        const values = [51, -3, 27, 21, -68, 42, -37];
+
+       values.filter((value, index, arr) =>  { arr[index] =0; return value >= 0;});
+        console.log(values); // [51, 27, 21, 42]
+
+    </script>
+</body>
+
+</html>

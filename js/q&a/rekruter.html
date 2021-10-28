@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        //https://dev.to/thepracticaldev/daily-challenge-266-who-likes-it-3b2i
+        function likes(names) {
+            return {
+                0: 'no one likes this',
+                1: `${names[0]} likes this`,
+                2: `${names[0]} and ${names[1]} like this`,
+                3: `${names[0]}, ${names[1]} and ${names[2]} like this`,
+                4: `${names[0]}, ${names[1]} and ${names.length - 2} others like this`,
+            }[Math.min(4, names.length)]
+        }
+
+        console.log(likes([]));
+
+    </script>
+</body>
+
+</html>
