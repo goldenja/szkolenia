@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 24px;
+        }
+
+        .is-hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button >Przycisk 1</button>
+    <button class="btn">Przycisk 2</button>
+
+            <script type="text/javascript">
+
+                const button = document.querySelector(".btn");
+
+                button.style.backgroundColor = "teal";
+                button.style.fontSize = "24px";
+                button.style.textAlign = "center";
+
+                console.log(button.style); // inline styles object
+
+            </script>
+</body>
+
+</html>

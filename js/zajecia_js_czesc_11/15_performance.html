@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 16px;
+        }
+
+        .article {
+            max-width: 320px;
+        }
+
+        .article-text {
+            color: tomato;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <article class="article">
+        <h2>Article title</h2>
+    </article>
+
+    <script type="text/javascript">
+
+        const article = document.querySelector(".article");
+        const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+   <a class="link" href="#">Read more...</a>`;
+
+        // Replace += with = operator. See the difference? 
+        // Article title is lost because we overwrite element content.
+        article.innerHTML += htmlString;
+
+    </script>
+</body>
+
+</html>

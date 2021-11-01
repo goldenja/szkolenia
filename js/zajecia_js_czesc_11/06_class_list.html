@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 24px;
+        }
+
+        .is-hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="paragraph" class="text red big">Proin magna. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam
+        libero, non adipiscing dolor urna a orci. Etiam rhoncus. Donec mi odio, faucibus at, scelerisque quis, convallis
+        in, nisi.</p>
+
+
+    <script type="text/javascript">
+
+        const text = document.querySelector("#paragraph");
+
+        console.log(text.classList); // ["text", "red", "big", value: "text red big"]
+
+        // console.log(text.classList.contains("red")); // true
+
+        // text.classList.remove("big");
+        // console.log(text.classList); // ["text", "red", value: "text red"]
+
+        // text.classList.add("new-class");
+        // console.log(text.classList); // ["text", "red", "new-class", value: "text red new-class"]
+
+        // // Can add multiple classes
+        // text.classList.add("a", "b", "c");
+        // console.log(text.classList);
+
+        // text.classList.toggle("is-hidden"); // will add is-hidden class
+        // text.classList.toggle("is-hidden"); // will remove is-hidden class
+
+        // // classList has a forEach method
+        // text.classList.forEach(cls => {
+        //     console.log(cls); // text, red, new-class
+        // });
+
+    </script>
+</body>
+
+</html>

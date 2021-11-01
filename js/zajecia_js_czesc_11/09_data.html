@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="editor">
+        <p>Donec id justo. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem
+            ut ipsum. Curabitur suscipit suscipit tellus. Phasellus gravida semper nisi.</p>
+        <div class="actions">
+            <button type="button" class="btn" data-action="save">Save</button>
+            <button type="button" class="btn" data-action="close">Close</button>
+        </div>
+    </div>
+
+    <ul class="dishes">
+        <li data-id="14">Baked Yak &amp; Mushrooms</li>
+        <li data-id="7">Strawberry Pancakes</li>
+        <li data-id="3">Caramel Toffee</li>
+        <li data-id="61">Pistachio Elderberry Wafer</li>
+    </ul>
+
+
+    <script type="text/javascript">
+
+        const saveBtn = document.querySelector('.editor button[data-action="save"]');
+        const closeBtn = document.querySelector('.editor button[data-action="close"]');
+
+        console.log(saveBtn.dataset.action); //save
+        console.log(closeBtn.dataset.action); //close
+
+        const dishes = document.querySelectorAll(".dishes > li");
+        dishes.forEach((dish) => {
+            console.log(dish.dataset.id);
+        });
+
+    </script>
+</body>
+
+</html>

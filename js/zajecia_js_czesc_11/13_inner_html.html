@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 16px;
+            font-family: sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <article class="article">
+        <h2 class="title">Article title</h2>
+        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, ipsa quibusdam! Praesentium
+            accusantium fugiat distinctio quidem minima fugit eos, veniam, nam laboriosam deleniti nisi qui neque
+            explicabo perspiciatis, consectetur non.</p>
+        <a class="link" href="">Read more</a>
+    </article>
+
+
+    <script type="text/javascript">
+
+        const article = document.querySelector(".article");
+        console.log(article.innerHTML);
+
+        const title = document.querySelector(".article .title");
+        console.log(title.innerHTML);
+
+        const text = document.querySelector(".article .text");
+        console.log(text.innerHTML);
+
+        const link = document.querySelector(".article .link");
+        console.log(link.innerHTML);
+    </script>
+</body>
+
+</html>

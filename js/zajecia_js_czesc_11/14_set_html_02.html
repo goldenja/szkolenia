@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 16px;
+        }
+
+        .list {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .list-item {
+            padding: 8px;
+            border-width: 2px;
+            border-style: dashed;
+        }
+
+        .list-item:nth-child(even) {
+            border-color: tomato;
+        }
+
+        .list-item:nth-child(odd) {
+            border-color: blueviolet;
+        }
+
+        .list-item:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <h2>Popular technologies</h2>
+        <ul class="list"></ul>
+    </section>
+
+
+    <script type="text/javascript">
+
+        const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+        const list = document.querySelector(".list");
+
+        const markup = technologies
+            .map((technology) => `<li class="list-item">${technology}</li>`)
+            .join("");
+
+        // Check the console, you'll see a single string with HTML tags
+        console.log(markup);
+
+        // Adding all the markup in one operation
+        list.innerHTML = markup;
+    </script>
+</body>
+
+</html>

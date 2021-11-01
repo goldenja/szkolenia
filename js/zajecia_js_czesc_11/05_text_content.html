@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <article class="article">
+        <h2 class="article-title">Welcome to Hawaii!</h2>
+        <p class="article-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat nemo
+            veritatis quasi eius eum aliquid, nobis dolore nisi, magnam eaque iusto, necessitatibus atque laborum quam
+            tempora ducimus dicta ipsam.</p>
+    </article>
+
+
+    <script type="text/javascript">
+        const text = document.querySelector(".article-text");
+        console.log(text.textContent); // text inside p.article-text
+
+        const title = document.querySelector(".article-title");
+        title.textContent = 'Welcome to Bahamas!';
+
+    </script>
+</body>
+
+</html>

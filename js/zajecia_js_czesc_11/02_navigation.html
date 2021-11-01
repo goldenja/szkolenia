@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+        <li>Fifth item</li>
+    </ul>
+
+    <script type="text/javascript">
+        console.log(document);
+
+        const body = document.body;
+        console.log(body);
+
+        const list = body.firstElementChild;
+        console.log(list);
+
+        const firstListItem = list.firstElementChild;
+        console.log(firstListItem);
+
+        const listItems = list.children;
+        console.log(listItems);
+
+    </script>
+</body>
+
+</html>

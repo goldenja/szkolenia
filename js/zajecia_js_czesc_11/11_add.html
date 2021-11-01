@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 24px;
+        }
+
+        .usernames li {
+            padding: 8px;
+            border: 2px dashed tomato;
+            text-transform: uppercase;
+        }
+
+        .usernames li:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <ul class="usernames">
+            <li>Mango</li>
+        </ul>
+    </div>
+
+
+    <script type="text/javascript">
+
+        const list = document.querySelector(".usernames");
+
+        // Adds an item to the end of the list
+        const lastItem = document.createElement("li");
+        lastItem.textContent = "Poly";
+        list.append(lastItem);
+
+        // // Adds an item to the beginning of the list
+        // const firstItem = document.createElement("li");
+        // firstItem.textContent = "Ajax";
+        // list.prepend(firstItem);
+
+        // // Adds a title before the list
+        // const title = document.createElement("h2");
+        // title.textContent = "USERNAMES";
+        // list.before(title);
+
+        // // Adds a paragraph after the list
+        // const text = document.createElement("p");
+        // text.textContent =
+        //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi!";
+        // list.after(text);
+
+        //Jeżeli wstawiany element znajduje się już w DOM, to jest usuwany ze starego miejsca i dodawany do nowego
+        //list.prepend(lastItem);
+
+    </script>
+</body>
+
+</html>
