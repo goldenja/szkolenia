@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button class="btn" data-action="add">Add Listener</button>
+    <button class="btn" data-action="remove">Remove Listener</button>
+    <hr>
+    <button id="btn" class="btn">Click me</button>
+
+    <script type="text/javascript">
+
+
+        const addListenerBtn = document.querySelector('[data-action="add"]');
+        const removeListenerBtn = document.querySelector('[data-action="remove"]');
+        const btn = document.querySelector("#btn");
+
+        const handleClick = () => {
+            console.log("click event listener callback");
+        };
+
+        addListenerBtn.addEventListener("click", () => {
+            btn.addEventListener("click", handleClick);
+            console.log("click event listener was added to btn");
+        });
+
+        removeListenerBtn.addEventListener("click", () => {
+            btn.removeEventListener("click", handleClick);
+            console.log("click event listener was removed from btn");
+        });
+
+
+        //getEventListeners(addListenerBtn);
+
+    </script>
+</body>
+
+</html>

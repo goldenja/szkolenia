@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="listener">Listener</button>
+    <hr>
+    <button id="btn" >Click me</button>
+
+    <script type="text/javascript">
+
+
+        const listener = document.getElementById("listener");
+        const btn = document.querySelector("#btn");
+
+
+        listener.addEventListener("click", (event) => {
+            console.log(event.currentTarget);
+        });
+
+        const eventClick = new Event('click');
+        btn.addEventListener("click", (event) => {
+            listener.dispatchEvent(eventClick);
+        });
+
+     
+
+    </script>
+</body>
+
+</html>

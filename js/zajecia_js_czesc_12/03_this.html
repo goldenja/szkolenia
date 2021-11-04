@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button class="js-btn">Przycisk</button>
+    <script type="text/javascript">
+
+        const mango = {
+            username: "Mango",
+            showUsername() {
+                console.log(this);
+                console.log(`My username is: ${this.username}`);
+            },
+        };
+
+        const btn = document.querySelector(".js-btn");
+
+        // ✅ Działa
+        mango.showUsername();
+
+        // ❌ this będzie się odnosić do button jeśli używać showUsername jako callback
+        btn.addEventListener("click", mango.showUsername); // nie działa
+
+        // ✅ Nie zapomnij dołączyć kontekstu metod obiektowych
+       // btn.addEventListener("click", mango.showUsername.bind(mango));
+
+
+    </script>
+</body>
+
+</html>
