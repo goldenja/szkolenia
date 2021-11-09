@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+  
+
+        let arr = [
+            { a: [{ n: 1 }] },
+            { b: [{ n: 1 }] }
+        ]
+        // ES6
+        // console.log(arr.map((obj) => obj.a[0].n)) // TypeError: property 'a' is not defined in arr[1]
+        // Lodash
+        console.log(_.map(arr, 'a[0].n')) // => [1, undefined]
+
+        //https://www.measurethat.net/Benchmarks/Show/3506/0/lodash-vs-es6
+
+    </script>
+
+</body>
+
+</html>
