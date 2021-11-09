@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #parent,
+        #child,
+        #descendant {
+            margin: 16px;
+            padding: 16px;
+            border: 4px solid #212121;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 500;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        #parent {
+            background-color: #673ab7;
+        }
+
+        #child {
+            background-color: #448aff;
+        }
+
+        #descendant {
+            background-color: #ff9800;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="parent">
+        Parent
+        <div id="child">
+            Child
+            <div id="descendant">Descendant</div>
+        </div>
+    </div>
+
+    <script>
+        const parent = document.querySelector("#parent");
+        const child = document.querySelector("#child");
+        const descendant = document.querySelector("#descendant");
+
+        parent.addEventListener("click", () => {
+            alert(
+                "Parent click handler. This alert will not appear when clicking on Descendant, the event will not reach here!"
+            );
+        });
+
+        child.addEventListener("click", () => {
+            alert(
+                "Child click handler. This alert will not appear when clicking on Descendant, the event will not reach here!"
+            );
+        });
+
+        descendant.addEventListener("click", (event) => {
+            event.stopPropagation();
+            //event.stopImmediatePropagation();
+            alert("Descendant click handler");
+        });
+
+        // descendant.addEventListener("click", (event) => {
+        //     alert("Second Descendant click handler");
+        // });
+    </script>
+
+</body>
+
+</html>
