@@ -1,0 +1,7 @@
+1. stwórz folder dist i przenieś tam index.html
+
+2. npm install --save lodash
+
+3. zaimportuj lodash do skyptu src/index.js
+
+4. uruchamiamy npx webpack --mode=development

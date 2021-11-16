@@ -1,0 +1,7 @@
+1. Dodaj plik webpack.config.js
+
+2. npx webpack --config webpack.config.js
+
+3. Dodaj do package.json   "scripts" -> "build": "webpack"
+
+4. npm run build
