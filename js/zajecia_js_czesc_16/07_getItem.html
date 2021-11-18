@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    localStorage.setItem("ui-theme", "dark");
+
+    const theme = localStorage.getItem("ui-theme");
+    console.log(theme); // "dark"
+
+
+    const settings = {
+      theme: "dark",
+      isAuthenticated: true,
+      options: [1, 2, 3],
+    };
+
+    localStorage.setItem("settings", JSON.stringify(settings));
+
+    const savedSettings = localStorage.getItem("settings");
+    const parsedSettings = JSON.parse(savedSettings);
+    console.log(parsedSettings); // settings object
+
+  </script>
+
+</body>
+
+</html>

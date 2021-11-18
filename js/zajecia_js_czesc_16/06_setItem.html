@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    localStorage.setItem("ui-theme", "light");
+    localStorage.setItem("sidebar", "expanded");
+    localStorage.setItem("notification-level", "mute");
+
+    const settings = {
+      theme: "dark",
+      isAuthenticated: true,
+      options: [1, 2, 3],
+    };
+
+    localStorage.setItem("settings", JSON.stringify(settings));
+
+  </script>
+
+</body>
+
+</html>

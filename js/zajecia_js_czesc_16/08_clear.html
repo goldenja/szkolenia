@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <style>
+    body {
+      padding: 20px;
+    }
+  </style>
+
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    localStorage.setItem("ui-theme", "light");
+    console.log(localStorage.getItem("ui-theme")); // "dark"
+
+    localStorage.removeItem("ui-theme");
+    console.log(localStorage.getItem("ui-theme")); // null
+
+
+    // localStorage.setItem("ui-theme", "light");
+    // localStorage.setItem("sidebar", "expanded");
+    // localStorage.setItem("notification-level", "mute");
+    // console.log(localStorage.getItem("ui-theme")); // "light"
+    // console.log(localStorage.getItem("sidebar")); // "expanded"
+    // console.log(localStorage.getItem("notification-level")); // "mute"
+
+    // localStorage.clear();
+    // console.log(localStorage.getItem("ui-theme")); // null
+    // console.log(localStorage.getItem("sidebar")); // null
+    // console.log(localStorage.getItem("notification-level")); // null
+
+  </script>
+
+</body>
+
+</html>

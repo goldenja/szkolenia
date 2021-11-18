@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <p>Value from localStorage: <span id="localOutput"></span></p>
+  <p>Value from sessionStorage: <span id="sessionOutput"></span></p>
+  <form id="message-form">
+    <input type="text" class="input" name="message">
+    <button type="submit" class="btn">Save</button>
+  </form>
+
+  <script>
+
+    const form = document.querySelector("#message-form");
+    const localOutput = document.querySelector("#localOutput");
+    const sessionOutput = document.querySelector("#sessionOutput");
+
+    const LOCALSTORAGE_KEY = "goit-example-message";
+
+    updateOutput();
+    form.addEventListener("submit", saveMessage);
+
+    function saveMessage(evt) {
+      evt.preventDefault();
+      localStorage.setItem(LOCALSTORAGE_KEY, form.elements.message.value);
+      sessionStorage.setItem(LOCALSTORAGE_KEY, form.elements.message.value);
+      updateOutput();
+      form.reset();
+    }
+
+    function updateOutput() {
+      localOutput.textContent = localStorage.getItem(LOCALSTORAGE_KEY) || "";
+      sessionOutput.textContent = sessionStorage.getItem(LOCALSTORAGE_KEY) || "";
+    }
+
+  </script>
+
+</body>
+
+</html>
