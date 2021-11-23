@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    console.log(moment("20111031", "YYYYMMDD").fromNow()); // 10 years ago
+    console.log(moment("20120620", "YYYYMMDD").fromNow()); // 9 years ago
+    console.log(moment().startOf('day').fromNow());        // 16 hours ago
+    console.log(moment().endOf('day').fromNow());          // in 8 hours
+    console.log(moment().startOf('hour').fromNow());      // an hour ago
+
+    console.log(moment().subtract(10, 'days').calendar()); // 11/12/2021
+    console.log(moment().subtract(6, 'days').calendar());  // Last Tuesday at 3:55 PM
+    console.log(moment().subtract(3, 'days').calendar());  // Last Friday at 3:55 PM
+    console.log(moment().subtract(1, 'days').calendar());  // Yesterday at 3:55 PM
+    console.log(moment().calendar());                      // Today at 3:55 PM
+    console.log(moment().add(1, 'days').calendar());       // Tomorrow at 3:55 PM
+    console.log(moment().add(3, 'days').calendar());       // Thursday at 3:55 PM
+    console.log(moment().add(10, 'days').calendar());
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+    <script>
+        //setTimeout i click trafią do kolejki zadań
+        setTimeout(() => {
+            console.log("Jestem tekstem z setTimeout A");
+        }, 0);
+
+        setTimeout(() => {
+            console.log("Jestem tekstem z setTimeout B");
+        }, 0);
+
+        //rejestruję klikanie na dokumencie
+        document.addEventListener("click", e => {
+            console.log("klik");
+        });
+
+        //pętla trwająca 3 sekundy
+        //kod synchroniczny - jako pierwszy trafi do Call Stack
+        let start = new Date().getTime();
+        let end = start;
+        while (end < start + 3000) {
+            end = new Date().getTime();
+        }
+
+        console.log("Jestem tekstem ze zwykłego console.log");
+    </script>
+</body>
+
+</html>
