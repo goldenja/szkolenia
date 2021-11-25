@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        function getPresent() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Oto prezent!');
+                }, 1000); // 5 sekund
+            });
+        }
+
+        function getSomething() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Oto coś!');
+                }, 1000); // 5 sekund
+            });
+        }
+
+        getPresent()
+            .then(present => {
+                return getSomething(present)
+                    .then(returnedValue => {
+                        console.log(returnedValue);
+                    });
+            });
+
+
+        // getPresent()
+        //     .then(present => getSomething(present))
+        //     .then(returnedValue => console.log(returnedValue));
+
+
+        // getPresent()
+        //     .then(getSomething)
+        //     .then(returnedValue => console.log(returnedValue));
+    </script>
+
+</body>
+
+</html>

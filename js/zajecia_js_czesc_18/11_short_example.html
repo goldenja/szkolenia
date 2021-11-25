@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        const makeGreeting = guestName => {
+            if (guestName === "" || guestName === undefined) {
+                return {
+                    success: false,
+                    message: "Guest name must not be empty",
+                };
+            }
+
+            return {
+                success: true,
+                message: `Welcome ${guestName}`,
+            };
+        };
+
+        const result = makeGreeting("Mango");
+
+        if (result.success) {
+            console.log(result.message);
+        } else {
+            console.error(result.message);
+        }
+
+
+        // const makeGreeting = (guestName, onSuccess, onError) => {
+        //     if (guestName === "" || guestName === undefined) {
+        //         return onError("Guest name must not be empty");
+        //     }
+        //     onSuccess(`Welcome ${guestName}`);
+        // };
+
+        // makeGreeting(
+        //     "Mango",
+        //     greeting => console.log(greeting),
+        //     error => console.error(error)
+        // );
+
+
+        // const makeGreeting = guestName => {
+        //     if (guestName === "" || guestName === undefined) {
+        //         return Promise.reject("Guest name must not be empty");
+        //     }
+
+        //     return Promise.resolve(`Welcome ${guestName}`);
+        // };
+
+        // makeGreeting("Mango")
+        //     .then(greeting => console.log(greeting))
+        //     .catch(error => console.error(error));
+
+    </script>
+
+</body>
+
+</html>

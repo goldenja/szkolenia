@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        const isSuccess = false;
+
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (isSuccess) {
+                    resolve("Success! Value passed to resolve function");
+                } else {
+                    reject("Error! Error passed to reject function");
+                }
+            }, 2000);
+        });
+
+        // Will run first
+        console.log("Before promise.then()");
+
+        promise
+            .then(value => {
+                console.log("onResolve call inside promise.then()");
+                console.log(value);
+            })
+            .catch(error => {
+                console.log("onReject call inside promise.then()");
+                console.log(error);
+            });
+
+        // Will run second
+        console.log("After promise.then()");
+
+    </script>
+
+</body>
+
+</html>

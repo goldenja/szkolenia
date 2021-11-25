@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+        const p1 = Promise.resolve(1) // zwraca 1
+        const p2 = p1.then(val => console.log(val + 1)) // zwraca 2
+        const p3 = p1.then(val => { console.log(val + 1); return (val + 1); }) // zwraca 2
+        const p4 = p3.then(val => console.log(val + 1))  // zwraca 3
+    </script>
+
+</body>
+
+</html>

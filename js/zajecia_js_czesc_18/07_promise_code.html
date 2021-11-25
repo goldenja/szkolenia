@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        const fetchUserFromServer = username => {
+            return new Promise((resolve, reject) => {
+                console.log(`Fetching data for ${username}`);
+
+                setTimeout(() => {
+                    // Change value of isSuccess variable to simulate request status
+                    const isSuccess = true;
+
+                    if (isSuccess) {
+                        resolve("success value");
+                    } else {
+                        reject("error");
+                    }
+                }, 2000);
+            });
+        };
+
+        fetchUserFromServer("Mango")
+            .then(user => console.log(user))
+            .catch(error => console.error(error));
+
+
+    </script>
+
+</body>
+
+</html>

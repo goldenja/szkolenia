@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+
+        Promise
+            .resolve(1)
+            .then(val => {
+                return Promise
+                    .resolve(val + 1)
+                    .then(newVal => {
+                        doSth(newVal) // funkcja nie istnieje, wyjatek!
+                    })
+            })
+            .catch(err => {
+                // tutaj zostaną złapane wszelkie błędy, które nie zostały złapane wcześniej
+                // zarówno synchroniczne (throw) jak i asynchroniczne (Promise.reject itp.)
+                console.log(err);
+            })
+
+        // Promise
+        //     .reject(new Error())
+        //     .catch(err => {
+        //         console.log(err);
+        //         return 'jest ok'; // obsluguję blad
+        //     })
+        //     .then(val => console.log(val)) // 'jest ok'
+
+
+
+        // Promise
+        //     .reject(new Error())
+        //     .catch(err => {
+        //         console.log(err);
+        //         return Promise.reject('jest ok') // nie obsługuję błędu
+        //     })
+        //     .then(val => console.log(val)) // nie wywoła się
+        //     .catch(err => console.log('tutaj jestem!')) // wywoła się, bo błąd nie był obsłuzony poprzednio
+    </script>
+
+</body>
+
+</html>

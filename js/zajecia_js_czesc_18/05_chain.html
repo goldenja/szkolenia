@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(5);
+            }, 2000);
+        });
+
+        promise
+            .then(value => {
+                console.log(value); // 5
+                return value * 2;
+            })
+            .then(value => {
+                console.log(value); // 10
+                return value * 3;
+            })
+            .then(value => {
+                console.log(value); // 30
+            })
+            .catch(error => {
+                console.log(error);
+            })
+            .finally(() => {
+                console.log("Final task");
+            });
+
+
+    </script>
+
+</body>
+
+</html>
