@@ -1,0 +1,120 @@
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 16px;
+      line-height: 1.5;
+      color: #212121;
+      font-family: sans-serif;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .posts {
+      margin: 0;
+      list-style: none;
+      padding: 24px;
+    }
+
+    .posts li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    .post-title {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .post-title:first-letter {
+      text-transform: uppercase;
+    }
+
+    .post-body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button type="button" class="btn">Fetch posts</button>
+  <ul class="posts"></ul>
+  
+  <script>
+    const fetchPostsBtn = document.querySelector(".btn");
+    const userList = document.querySelector(".posts");
+
+    fetchPostsBtn.addEventListener("click", () => {
+      fetchPosts()
+        .then((posts) => renderPosts(posts))
+        .catch((error) => console.log(error));
+    });
+
+    function fetchPosts() {
+      // Change the number of items in the group here  
+      return fetch("https://jsonplaceholder.typicode.com/posts?_limit=5").then(
+        (response) => {
+          if (!response.ok) {
+            throw new Error(response.status);
+          }
+          return response.json();
+        }
+      );
+    }
+
+    function renderPosts(posts) {
+      const fetchPostsBtn = document.querySelector(".btn");
+      const userList = document.querySelector(".posts");
+
+      fetchPostsBtn.addEventListener("click", () => {
+        fetchPosts()
+          .then((posts) => renderPosts(posts))
+          .catch((error) => console.log(error));
+      });
+
+      function fetchPosts() {
+        // Change the number of items in the group here  
+        return fetch("https://jsonplaceholder.typicode.com/posts?_limit=5").then(
+          (response) => {
+            if (!response.ok) {
+              throw new Error(response.status);
+            }
+            return response.json();
+          }
+        );
+      }
+
+      function renderPosts(posts) {
+        const markup = posts
+          .map(({ id, title, body, userId }) => {
+            return `<li>
+          <h2 class="post-title">${title.slice(0, 30)}</h2>
+          <p><b>Post id</b>: ${id}</p>
+          <p><b>Author id</b>: ${userId}</p>
+          <p class="post-body">${body}</p>
+        </li>`;
+          })
+          .join("");
+        userList.innerHTML = markup;
+      }
+      const markup = posts
+        .map(({ id, title, body, userId }) => {
+          return `<li>
+          <h2 class="post-title">${title.slice(0, 30)}</h2>
+          <p><b>Post id</b>: ${id}</p>
+          <p><b>Author id</b>: ${userId}</p>
+          <p class="post-body">${body}</p>
+        </li>`;
+        })
+        .join("");
+      userList.innerHTML = markup;
+    }
+  </script>
+
+</body>
+
+</html>
