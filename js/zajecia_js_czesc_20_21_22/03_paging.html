@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 16px;
+            line-height: 1.5;
+            color: #212121;
+            font-family: sans-serif;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .user-list {
+            margin: 0;
+            list-style: none;
+            padding: 24px;
+        }
+
+        .user-list li:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button type="button" class="btn">Fetch posts</button>
+    <ul class="posts"></ul>
+
+    <script>
+
+        const fetchPostsBtn = document.querySelector(".btn");
+        const userList = document.querySelector(".posts");
+        const alertPopup = document.querySelector(".alert");
+        let isAlertVisible = false;
+
+        // Controls the group number
+        let page = 1;
+        // Controls the number of items in the group
+        let limit = 5;
+        // In our case total number of pages is calculated on frontend
+        const totalPages = 100 / limit;
+
+        fetchPostsBtn.addEventListener("click", () => {
+            // Check the end of the collection to display an alert
+            if (page > totalPages) {
+                return toggleAlertPopup();
+            }
+
+            fetchPosts()
+                .then((posts) => {
+                    renderPosts(posts);
+                    // Increase the group number
+                    page += 1;
+
+                    // Replace button text after first request
+                    if (page > 1) {
+                        fetchPostsBtn.textContent = "Fetch more posts";
+                    }
+                })
+                .catch((error) => console.log(error));
+        });
+
+        function fetchPosts() {
+            const params = new URLSearchParams({
+                _limit: limit,
+                _page: page
+            });
+
+            return fetch(`https://jsonplaceholder.typicode.com/posts?${params}`).then(
+                (response) => {
+                    if (!response.ok) {
+                        throw new Error(response.status);
+                    }
+                    return response.json();
+                }
+            );
+        }
+
+        function renderPosts(posts) {
+            const markup = posts
+                .map(({ id, title, body, userId }) => {
+                    return `<li>
+          <h2 class="post-title">${title.slice(0, 30)}</h2>
+          <p><b>Post id</b>: ${id}</p>
+          <p><b>Author id</b>: ${userId}</p>
+          <p class="post-body">${body}</p>
+        </li>`;
+                })
+                .join("");
+            userList.insertAdjacentHTML("beforeend", markup);
+        }
+
+        function toggleAlertPopup() {
+            if (isAlertVisible) {
+                return;
+            }
+            isAlertVisible = true;
+            alertPopup.classList.add("is-visible");
+            setTimeout(() => {
+                alertPopup.classList.remove("is-visible");
+                isAlertVisible = false;
+            }, 3000);
+        }
+    </script>
+<!-- https://jsonplaceholder.typicode.com/photos?_start=0&_end=5 -->
+</body>
+
+</html>

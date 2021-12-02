@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fetchUsers = async () => {
+            console.time('parallel');
+            const baseUrl = "https://jsonplaceholder.typicode.com";
+            const firstResponse = await fetch(`${baseUrl}/users/1`);
+            const secondResponse = await fetch(`${baseUrl}/users/2`);
+            const thirdResponse = await fetch(`${baseUrl}/users/3`);
+
+            const firstUser = await firstResponse.json();
+            const secondUser = await secondResponse.json();
+            const thirdUser = await thirdResponse.json();
+
+            console.log(firstUser, secondUser, thirdUser);
+            console.timeEnd('parallel');
+        };
+
+        fetchUsers();
+    </script>
+</body>
+
+</html>

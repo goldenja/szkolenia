@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fetchUsers = async () => {
+            console.time('parallel');
+            const baseUrl = "https://jsonplaceholder.typicode.com";
+            const userIds = [1, 2, 3];
+
+            // 1. Tworzymy tablicę obietnic
+            const arrayOfPromises = userIds.map(async userId => {
+                const response = await fetch(`${baseUrl}/users/${userId}`);
+                return response.json();
+            });
+
+            // 2. Uruchamiamy wszystkie obietnice równolegle i czekamy na ich zakończenie
+            const users = await Promise.all(arrayOfPromises);
+            console.log(users);
+            console.timeEnd('parallel');
+        };
+
+        fetchUsers();
+    </script>
+</body>
+
+</html>
