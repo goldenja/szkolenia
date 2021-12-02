@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+
+        const url = "https://jsonplaceholder.typicode.com/users";
+
+        const ob = {
+            name: "Johna",
+            surname: "Connor",
+            email: "dead@replacedbydani.com"
+        }
+
+        const headers = new Headers();
+        headers.append("Content-Type", "application/json");
+        headers.append("X-Custom-Header", "custom value");
+        headers.has("Content-Type"); // true
+        headers.get("Content-Type"); // "text/bash"
+        headers.set("Content-Type", "application/json");
+        headers.delete("X-Custom-Header");
+
+        fetch(url, {
+            method: "post",
+            headers: headers,
+            body: JSON.stringify(ob)
+        })
+            .then(res => res.json())
+            .then(res => {
+                console.log("Dodałem użytkownika:");
+                console.log(res);
+            })
+
+    </script>
+
+</body>
+
+</html>
