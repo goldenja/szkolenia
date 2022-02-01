@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // function Welcome(props) {
+        //     return <h1>Cześć, {props.name}</h1>;
+        // }
+
+        class Welcome extends React.Component {
+            render() {
+                return <h1>Cześć, {this.props.name}</h1>;
+            }
+        }
+
+        ReactDOM.render(
+            React.createElement(Welcome),
+            document.getElementById('root')
+        );
+    </script>
+
+</body>
+
+</html>

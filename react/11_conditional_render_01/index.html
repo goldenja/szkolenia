@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function UserGreeting(props) {
+            return <h1>Witamy ponownie!</h1>;
+        }
+
+        function GuestGreeting(props) {
+            return <h1>Proszę się zarejestrować.</h1>;
+        }
+
+        function Greeting(props) {
+            const isLoggedIn = props.isLoggedIn;
+            if (isLoggedIn) {
+                return <UserGreeting />;
+            }
+            return <GuestGreeting />;
+        }
+
+
+        ReactDOM.render(
+            <Greeting isLoggedIn={false} />,
+            document.getElementById("root")
+        );
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Mailbox(props) {
+            const unreadMessages = props.unreadMessages;
+            return (
+                <div>
+                    <h1>Cześć!</h1>
+                    {unreadMessages.length > 0 &&
+                        <h2>
+                            Masz {unreadMessages.length} nieprzeczytanych wiadomości.
+                        </h2>
+                    }
+                </div>
+            );
+        }
+
+        // function Mailbox(props) {
+        //     const count = 0;
+        //     return (
+        //         <div>
+        //             {count && <h1>Wiadomości: {count}</h1>}
+        //         </div>
+        //     );
+        // }
+
+        const messages = ['React', 'Re: React', 'Re:Re: React'];
+        ReactDOM.render(
+            <Mailbox unreadMessages={messages} />,
+            document.getElementById('root')
+        );
+
+        //Powyższy kod działa, ponieważ w JavaScripcie true && *wyrażenie* zawsze jest ewaluowane jako wyrażenie, natomiast false && wyrażenie jako false.
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const Profile = ({ name, email }) => (
+            <div>
+                <p>Name: {name}</p>
+                <p>Email: {email}</p>
+            </div>
+        );
+
+        const Panel = ({ title, children }) => (
+            <section>
+                <h2>{title}</h2>
+                {children}
+            </section>
+        );
+
+        const App = () => (
+            <div>
+                <Panel title="User profile">
+                    <Profile name="Mango" email="mango@mail.com" />
+                </Panel>
+            </div>
+        );
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById("root")
+        );
+    </script>
+
+</body>
+
+</html>
