@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <link href="Button.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const Button = ({ type = "button", label, disabled }) => {
+            const btnClasses = ["Button"];
+
+            if (disabled) {
+                btnClasses.push("Button-disabled");
+            }
+
+            return (
+                <button type={type} disabled={disabled} className={btnClasses.join(" ")}>
+                    {label}
+                </button>
+            );
+        };
+
+
+        ReactDOM.render(
+            <Button label="hejka" disabled="true" />,
+            document.getElementById('root')
+        );
+    </script>
+
+</body>
+
+</html>

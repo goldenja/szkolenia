@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const buttonStyles = {
+            display: "inline-flex",
+            margin: "0 4px",
+            padding: "8px 24px",
+            border: 0,
+            borderRadius: 2,
+            fontSize: 14,
+            fontFamily: "inherit",
+        };
+
+        const Button = ({ type = "button", label, disabled }) => (
+            <button
+                type={type}
+                disabled={disabled}
+                style={{
+                    ...buttonStyles,
+                    backgroundColor: disabled ? "#0000001f" : "#2196f3",
+                    color: disabled ? "#00000042" : "#ffffff",
+                }}
+            >
+                {label}
+            </button>
+        );
+
+
+        ReactDOM.render(
+            <Button label="hejka"/>,
+            document.getElementById('root')
+        );
+    </script>
+
+</body>
+
+</html>
