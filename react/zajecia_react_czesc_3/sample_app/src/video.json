@@ -1,0 +1,14 @@
+[
+  {
+    "id": "id-1",
+    "link": "http://techslides.com/demos/sample-videos/small.mp4"
+  },
+  {
+    "id": "id-2",
+    "link": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+  },
+  {
+    "id": "id-3",
+    "link": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+  }
+]
