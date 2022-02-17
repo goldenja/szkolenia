@@ -11,8 +11,9 @@ import {
 
 import Home from './components/00_Home.js'
 import FetchSample from './components/01_FetchSample';
-import AxiosSample from './components/02_AxiosSample';
-import ServiceSample from './components/03_ServiceSample';
+import AxiosSample from './components/03_AxiosSample';
+import ServiceSample from './components/04_ServiceSample';
+import AbortSample from './components/02_AbortSample';
 
 
 
@@ -24,6 +25,7 @@ ReactDOM.render(
         <Route path="/" element={<App />} >
           <Route path="home" element={<Home />} />
           <Route path="fetchsample" element={<FetchSample />} />
+          <Route path="abortsample" element={<AbortSample />} />
           <Route path="axiossample" element={<AxiosSample />} />
           <Route path="servicesample" element={<ServiceSample />} />
         </Route>

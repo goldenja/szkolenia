@@ -15,6 +15,7 @@ function App() {
       >
         <Link to="/home">Home</Link>
         <Link to="/fetchsample">Fetch Sample</Link>
+        <Link to="/abortsample">Abort Sample</Link>
         <Link to="/axiossample">Axios Sample</Link>
         <Link to="/servicesample">Service Sample</Link>
       </nav>
