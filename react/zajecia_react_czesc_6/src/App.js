@@ -18,6 +18,8 @@ function App() {
         <Link to="/abortsample">Abort Sample</Link>
         <Link to="/axiossample">Axios Sample</Link>
         <Link to="/servicesample">Service Sample</Link>
+        <Link to="/hoc">HOC</Link>
+        <Link to="/betterpage">Better Page</Link>
       </nav>
       <Outlet />
 

@@ -14,6 +14,8 @@ import FetchSample from './components/01_FetchSample';
 import AxiosSample from './components/03_AxiosSample';
 import ServiceSample from './components/04_ServiceSample';
 import AbortSample from './components/02_AbortSample';
+import EnhancedLikes from './components/05_HOC';
+import BetterPage from './components/06_MachineState';
 
 
 
@@ -28,6 +30,8 @@ ReactDOM.render(
           <Route path="abortsample" element={<AbortSample />} />
           <Route path="axiossample" element={<AxiosSample />} />
           <Route path="servicesample" element={<ServiceSample />} />
+          <Route path="hoc" element={<EnhancedLikes />} />
+          <Route path="betterpage" element={<BetterPage />} />
         </Route>
       </Routes>
     </BrowserRouter>,
