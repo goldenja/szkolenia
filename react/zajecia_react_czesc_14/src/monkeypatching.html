@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class SimpleMathObject {
+            add(a, b) {
+                return a + b;
+            }
+        }
+
+        const MathObject = new SimpleMathObject();
+        
+        // Make a copy of the original add function 
+        const origAdd = MathObject.add;
+
+
+        // Making Monkey Patch
+        MathObject.add = function (a, b) {
+            console.log(`Adding the result of ${a} and ${b}`);
+            return origAdd(a, b);
+        }
+
+        const result = MathObject.add(1, 2);
+        console.log(`Result of 1 + 2 = ${result}`);
+
+    </script>
+</body>
+
+</html>
