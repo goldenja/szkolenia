@@ -1,0 +1,7 @@
+{
+  "name": "Bla vla",
+  "email": "testsdf@mail.com",
+  "password": "xssd!ASD$"
+}
+
+
