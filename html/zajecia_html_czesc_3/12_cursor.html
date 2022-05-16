@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursor</title>
+    <style type="text/css">
+
+        .cursors div {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .cursors div:hover {
+           background-color: coral;
+        }
+
+        .auto {
+            cursor: auto;
+        }
+
+        .default {
+            cursor: default;
+        }
+
+        .none {
+            cursor: none;
+        }
+
+        .help {
+            cursor: help;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .png {
+            cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
+        }
+
+        a {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursors">
+        <div class="auto">auto</div>
+        <div class="default">default</div>
+        <div class="none">none</div>
+        <div class="help">help</div>
+        <div class="pointer" onclick="">pointer</div>
+        <div class="png">png</div>
+
+
+    </div>
+</body>
+
+</html>
