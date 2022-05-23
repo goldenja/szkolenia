@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+
+    <style type="text/css">
+        .box-1 {
+            width: 180px;
+            height: 80px;
+            background-color: #f44336;
+
+            /*  The value can be pixels  */
+            border-radius: 10px;
+        }
+
+        .box-2 {
+            width: 120px;
+            height: 120px;
+            background-color: #2196f3;
+
+            /*  The value can be percent  */
+       
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 10%;
+       
+
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 10%;
+        }
+
+        .box-3 {
+            width: 150px;
+            height: 150px;
+            background-color: #4caf50;
+
+            /*  If the block is a square, settings the radius to 50% will transform it to a circle  */
+            border-radius: 50%;
+        }
+
+        .box-1,
+        .box-2 {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box-1"></div>
+<div class="box-2"></div>
+<div class="box-3"></div>
+</body>
+
+</html>

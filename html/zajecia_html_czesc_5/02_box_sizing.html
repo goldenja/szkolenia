@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style type="text/css">
+        .container {
+            width: 100px;
+            height: 100px;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .container-context-box {
+            box-sizing: content-box;
+            background-color: crimson;
+        }
+
+        .container-border-box {
+            box-sizing: border-box;
+            background-color: cadetblue;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container container-context-box">context-box</div>
+    <div class="container container-border-box">border-box</div>
+</body>
+
+</html>

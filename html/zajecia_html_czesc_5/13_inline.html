@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline</title>
+
+    <style type="text/css">
+        .link {
+            background-color: tomato;
+            color: white;
+
+            /* ✅ Działa */
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-right: 50px;
+            margin-left: 50px;
+     
+            /* ❌ Nie działa */
+            width: 1000px;
+            height: 1000px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a class="link" href="">Link</a>
+    <a class="link" href="">Link2</a>
+    <a class="link" href="">Link3</a>
+    <a class="link" href="">Link4</a>
+</body>
+
+</html>
