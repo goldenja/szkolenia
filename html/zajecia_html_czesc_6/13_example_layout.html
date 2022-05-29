@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.5;
+            font-size: 20px;
+            background-color: #edf2f7;
+        }
+
+        .container {
+            display: flex;
+            max-width: 960px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .sidebar {
+            flex-basis: 250px;
+            margin-right: 24px;
+        }
+
+        .content {
+            flex-grow: 1;
+        }
+
+        .sidebar,
+        .content {
+            height: 350px;
+            padding: 20px;
+            border-radius: 4px;
+            background-color: #fff;
+            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <aside class="sidebar">Sidebar</aside>
+        <main class="content">Main content</main>
+    </div>
+</body>
+
+
+</html>
