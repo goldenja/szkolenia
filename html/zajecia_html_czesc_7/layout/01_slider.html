@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .chart {
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slider {
+            position: relative;
+            border-bottom: 2px solid black;
+            margin: 4px 0;
+            border-radius: 2px;
+            width: 60px;
+        }
+
+        .circle {
+            position: absolute;
+            display: inline-block;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 50%;
+            width: 3px;
+            height: 3px;
+            top: -2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chart">
+        <div class="slider">
+            <div class="circle" style="left:10px"></div>
+        </div>
+        <div class="slider">
+            <div class="circle" style="left:47px"></div>
+        </div>
+        <div class="slider">
+            <div class="circle" style="left:20px"></div>
+        </div>
+        <div class="slider">
+            <div class="circle" style="left:7px"></div>
+        </div>
+    </div>
+</body>
+
+</html>

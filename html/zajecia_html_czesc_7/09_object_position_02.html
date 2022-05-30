@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #navlist {
+            position: relative;
+        }
+
+        #navlist li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+        }
+
+        #navlist li,
+        #navlist a {
+            height: 44px;
+            display: block;
+        }
+
+        #home {
+            left: 0px;
+            width: 46px;
+            background: url('images/img_navsprites_hover.gif') 0 0;
+        }
+
+        #prev {
+            left: 63px;
+            width: 43px;
+            background: url('images/img_navsprites_hover.gif') -47px 0;
+        }
+
+        #next {
+            left: 129px;
+            width: 43px;
+            background: url('images/img_navsprites_hover.gif') -91px 0;
+        }
+
+        #home a:hover {
+            background: url('images/img_navsprites_hover.gif') 0 -45px;
+        }
+
+        #prev a:hover {
+            background: url('images/img_navsprites_hover.gif') -47px -45px;
+        }
+
+        #next a:hover {
+            background: url('images/img_navsprites_hover.gif') -91px -45px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="navlist">
+        <li id="home"><a href="default.asp"></a></li>
+        <li id="prev"><a href="css_intro.asp"></a></li>
+        <li id="next"><a href="css_syntax.asp"></a></li>
+    </ul>
+</body>
+
+
+</html>

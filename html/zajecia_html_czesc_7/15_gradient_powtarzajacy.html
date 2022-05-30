@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --start-color: #ff8a00;
+            --end-color: #e52e71;
+        }
+
+        .title {
+
+             background-image: repeating-radial-gradient(circle at  center,
+                    var(--start-color),
+                    var(--start-color) 20px,
+                    var(--end-color) 20px,
+                    var(--end-color) 90px); 
+
+
+            /* background-image: repeating-linear-gradient(to right,
+                    var(--start-color),
+                    var(--start-color) 20px,
+                    var(--end-color) 20px,
+                    var(--end-color) 90px); */
+                background-repeat: no-repeat;
+            color: white;
+            min-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+    </div>
+
+</body>
+
+</html>
