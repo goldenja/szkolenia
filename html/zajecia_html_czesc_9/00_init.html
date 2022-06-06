@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .rect-frame-filled {
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: indianred;
+            width: 210px;
+            height: 210px;
+            margin: 40px;
+            position: static;
+        }
+
+        .rect-frame-filled:nth-child(1)
+        {
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <div style="display: inline-block;">
+            <div class="rect-frame-filled"></div>
+            <div class="rect-frame-filled"></div>
+        </div>
+        <div class="rect-frame-filled"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: #18191a;
+        }
+
+        .user-list li {
+            list-style-type: none;
+        }
+
+        .user-list-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .user-list-item-info {
+            align-self: center;
+            margin-left: 10px;
+            color: white;
+            font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size:15px; 
+            font-weight: 500;
+        }
+
+        .avatar {
+            background-color: gray;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+
+        .avatar-content{
+            position: relative;  
+            width: inherit;
+            height: inherit;
+        }
+
+        .avatar-content img {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        .state {
+            position: absolute;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #18191a;
+            bottom: 1px;
+            right: 1px;
+        }
+
+        .state.active {
+            background-color:rgb(49, 162, 76);
+        }
+
+        .state-time {
+            position: absolute;
+            bottom: 0;
+            font-size: 10px;
+            line-height: 12px;
+            color: rgb(49, 162, 76);
+            background-color:#15401D;
+            font-weight: 700;
+            padding: 0 2px 0 3px;
+            border-radius: 5px;
+            min-width: 37px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <ul class="user-list">
+        <li>
+            <div class="user-list-item">
+                <div class="avatar">
+                    <div class="avatar-content">
+                        <img src="./images/people/facebook-avata.jpg"/>
+                        <div class="state active"></div>
+                    </div>  
+                </div>
+                <div class="user-list-item-info">
+                    Jan Kowalski
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="user-list-item">
+                <div class="avatar">
+                    <div class="avatar-content">
+                        <img src="./images/people/women.png"/>
+                        <div class="state active">
+
+                        </div>
+                    </div>  
+                </div>
+                <div class="user-list-item-info">
+                    Iza Giza
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="user-list-item">
+                <div class="avatar">
+                    <div class="avatar-content">
+                        <img src="./images/people/man.jpg"/>
+                        <div class="state-time">30 min.</div>
+                    </div>  
+                </div>
+                <div class="user-list-item-info">
+                    Julisz Cezar
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="user-list-item">
+                <div class="avatar">
+                    <div class="avatar-content">
+                        <img src="./images/people/facebook-avata.jpg"/>
+                        <div class="state active"></div>
+                    </div>  
+                </div>
+                <div class="user-list-item-info">
+                    Romek Atomek
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="user-list-item">
+                <div class="avatar">
+                    <div class="avatar-content">
+                        <img src="./images/people/facebook-avata.jpg"/>
+                        <div class="state active"></div>
+                    </div>  
+                </div>
+                <div class="user-list-item-info">
+                    Jacek Placek
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="user-list-item">
+                <div class="avatar">
+                    <div class="avatar-content">
+                        <img src="./images/people/facebook-avata.jpg"/>
+                        <div class="state active"></div>
+                    </div>  
+                </div>
+                <div class="user-list-item-info">
+                    Leonid Aster
+                </div>
+            </div>
+        </li>
+       
+    </ul>
+</body>
+
+</html>
