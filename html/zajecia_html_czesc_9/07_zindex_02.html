@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- https://netgen.io/blog/stacking-elements-css-z-index-and-stacking-context-explained -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top,
+        .bottom {
+            width: 250px;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .inner {
+            padding: 20px;
+        }
+
+        .bottom {
+            z-index: 2;
+            margin-top: -90px;
+            opacity: 0.8;
+            box-shadow: 0 -1px 10px rgba(0 0 0 / 60%);
+        }
+
+        .top {
+            z-index: 1;
+            background: aliceblue;
+            border: 2px solid lightblue;
+        }
+
+        .bottom {
+            background: pink;
+            border: 2px solid hotpink;
+        }
+
+        .inner {
+            background: wheat;
+            border: 2px solid gold;
+        }
+
+        .top>.inner {
+            z-index: 999;
+        }
+
+        .bottom>.inner {
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <article class="flow">
+                <h1>Stacking contexts</h1>
+
+                <div class="top">
+                    <code>z-index: 1;</code>
+                    <div class="inner">
+                        <code>z-index: 999;</code>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <code>z-index: 2;</code>
+                    <div class="inner">
+                        <code>z-index: 2;</code>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>

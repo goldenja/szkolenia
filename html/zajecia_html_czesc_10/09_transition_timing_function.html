@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      min-height: 500px;
+      background-image: url(./images/road.png);
+      background-size: contain;
+      flex-direction: column;
+    }
+
+    .box {
+      position: relative;
+      width: 200px;
+      min-height: 100px;
+      margin: 10px;
+      font-size: 17px;
+      transition-duration: 3s;
+      transition-property: transform;
+      background-size: contain;
+    }
+
+    .box:nth-child(1) {
+      transition-timing-function: linear;
+      background-image: url(./images/car1.png);
+      margin-top: 100px;
+    }
+
+
+    .box:nth-child(2) {
+      transition-timing-function: cubic-bezier(.08, .48, 0, .98);
+      background-image: url(./images/car2.png);
+      margin-bottom: 100px;
+    }
+
+    .container:hover .box {
+      transform: translatex(calc(100vw - 200px));
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- https://cubic-bezier.com/#.08,.48,0,.98 -->
+  <div class="container">
+    <div class="box"> </div>
+    <div class="box"></div>
+  </div>
+</body>
+
+</html>
