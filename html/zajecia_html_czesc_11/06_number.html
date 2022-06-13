@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+
+    input {
+      padding: 8px;
+      font-family: inherit;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <label>
+    Age
+    <input type="number" name="age" value="0" min="18" max="120" />
+  </label>
+
+  <label>
+    Weight with 0.1 step value:
+    <input type="number" name="weight" min="0" max="150" step="0.1" value="0" />
+  </label>
+
+  <label>
+    Height with 0.4 step value:
+    <input type="number" name="height" min="0" max="200" step="0.4" value="0" />
+  </label>
+
+</body>
+
+</html>

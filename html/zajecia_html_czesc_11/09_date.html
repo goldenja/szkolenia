@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+
+
+        input {
+            padding: 8px;
+            font-family: inherit;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <label>
+            Date
+            <input type="date" min="1920-01-01" max="2020-01-01" />
+        </label>
+
+        <label>
+            Time
+            <input type="time" />
+        </label>
+
+        <label>
+            Date and time
+            <input type="datetime-local" min="1920-01-01T00:00" max="2020-01-01T00:00" />
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

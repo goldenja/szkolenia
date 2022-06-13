@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .form-group p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+  <form class="form">
+    <div class="form-group" role="group" aria-labelby="contact-details-head">
+      <p id="contact-details-head">Enter your contact details</p>
+      <label>
+        Name
+        <input type="text" name="username" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+    </div>
+  
+    <div class="form-group" role="group" aria-labelby="language-head">
+      <p id="language-head">Your favourite programming language</p>
+      <label>
+        <input type="checkbox" name="language" value="python">
+        Python
+      </label>
+      <label>
+        <input type="checkbox" name="language" value="js">
+        JavaScript
+      </label>
+      <label>
+        <input type="checkbox" name="language" value="ruby">
+        Ruby
+      </label>
+    </div>
+  
+    <div class="form-group" role="group" aria-labelby="newsletter-head">
+      <p id="newsletter-head">I want to receive</p>
+      <label>
+        <input type="checkbox" name="newsletter" value="weekly">
+        The weekly newsletter
+      </label>
+      <label>
+        <input type="checkbox" name="newsletter" value="company_offers">
+        Offers from the company
+      </label>
+      <label>
+        <input type="checkbox" name="newsletter" value="associated_offers">
+        Offers from associated companies
+      </label>
+    </div>
+  
+    <button type="submit">Subscribe</button>
+  </form>
+  
+</body>
+
+</html>
