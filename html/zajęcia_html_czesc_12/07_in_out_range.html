@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form-input:in-range {
+            border-color: #4caf50;
+        }
+
+        .form-input:out-of-range {
+            border-color: #f44336;
+        }
+
+        /* Example styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+            color: #2a2a2a;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        .form-label {
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .form-input {
+            padding: 8px;
+            border: 1px solid #2a2a2a;
+            border-radius: 4px;
+            font-family: sans-serif;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button {
+            display: inline-flex;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 4px;
+            background-color: #2196f3;
+            color: #fff;
+            font-size: inherit;
+            cursor: pointer;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #1976d2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form class="form">
+        <div class="form-field">
+            <label for="amount-1" class="form-label">How many pizzas do you want to order?</label>
+            <input type="number" required min="1" max="10" step="1" value="0" name="amount-1" id="amount-1"
+                class="form-input">
+        </div>
+        <div class="form-field">
+            <label for="amount-2" class="form-label">How many pizzas do you want to order?</label>
+            <input type="number" required min="1" max="10" step="1" value="3" name="amount-2" id="amount-2"
+                class="form-input">
+        </div>
+        <div class="form-field">
+            <label for="amount-3" class="form-label">How many pizzas do you want to order?</label>
+            <input type="number" required min="1" max="10" step="1" name="amount-3" id="amount-3" class="form-input">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

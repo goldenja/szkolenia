@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Selecting .form-label when the checkbox preceding it in markup is checked */
+        /* https://www.w3schools.com/cssref/css_selectors.asp */
+        /* element+element	div + p	Selects the first <p> element that are placed immediately after <div> elements */
+        /* Example styles */
+        /* Selecting .form-label when the checkbox preceding it in markup is checked */
+        .form-input:checked+.form-label {
+            color: #2196f3;
+        }
+
+        /* Example styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+            color: #2a2a2a;
+        }
+
+        .form-caption {
+            display: block;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-field {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .form-label {
+            margin-left: 4px;
+            cursor: pointer;
+        }
+
+        button {
+            display: inline-flex;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 4px;
+            background-color: #2196f3;
+            color: #fff;
+            font-size: inherit;
+            cursor: pointer;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #1976d2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form class="form">
+        <div role="group" class="form-group">
+            <b class="form-caption">What are your hobbies?</b>
+
+            <div class="form-field">
+                <input type="checkbox" class="form-input" name="hobby" value="sports" id="sports">
+                <label class="form-label" for="sports">Sports</label>
+            </div>
+
+            <div class="form-field">
+                <input type="checkbox" class="form-input" name="hobby" value="music" id="music">
+                <label class="form-label" for="music">Music</label>
+            </div>
+
+            <div class="form-field">
+                <input type="checkbox" class="form-input" name="hobby" value="books" id="books">
+                <label class="form-label" for="books">Books</label>
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
