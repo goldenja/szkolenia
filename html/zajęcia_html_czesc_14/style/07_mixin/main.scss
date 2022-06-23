@@ -1,0 +1,14 @@
+@mixin bordered($color) {
+    border-top: 1px solid $color;
+    border-bottom: 1px solid $color;
+  }
+  
+  .section {
+    @include bordered(tomato);
+    padding: 20px;
+  }
+  
+  .header {
+    @include bordered(green);
+    min-height: 80px;
+  }

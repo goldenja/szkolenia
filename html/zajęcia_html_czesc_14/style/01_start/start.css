@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* ✅ Nowa składnia SCSS */
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+}
+
+.box:hover {
+  background-color: orange;
+}
+/*# sourceMappingURL=start.css.map */

@@ -1,0 +1,16 @@
+.section {
+  width: 100%;
+
+  &:hover {
+    color: red;
+  }
+
+  &:focus {
+    color: red;
+  }
+
+  // &:hover,
+  // &:focus {
+  //   color: red;
+  // }
+}

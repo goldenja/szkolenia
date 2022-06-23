@@ -1,0 +1,12 @@
+.section {
+  width: 100%;
+}
+
+.section:hover {
+  color: red;
+}
+
+.section:focus {
+  color: red;
+}
+/*# sourceMappingURL=main3.css.map */

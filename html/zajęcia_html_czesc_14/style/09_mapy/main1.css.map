@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGE,AAAA,IAAI,CAAC;EACH,gBAAgB,ECJJ,OAAO;CDKpB",
+    "sources": [
+        "main1.scss",
+        "_colors1.scss"
+    ],
+    "names": [],
+    "file": "main1.css"
+}

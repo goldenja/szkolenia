@@ -1,0 +1,12 @@
+$primaryColor: #888;
+$cardBorderRadius: 4px;
+
+.product {
+  background-color: $primaryColor;
+  border-radius: $cardBorderRadius;
+}
+
+.box {
+  $primaryColor: blue;
+  background: $primaryColor;
+}

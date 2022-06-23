@@ -1,0 +1,33 @@
+.box {
+  // width: 960px + 10%; // Błąd!
+  width: 960px + 30px; // 990px
+  width: 960px + 30; // 990px
+  width: 100% + 20%; // 120%
+
+  // width: 100% - 50px; // Błąd!
+  width: 960px - 30px; // 930px
+  width: 960px - 30; // 930px
+  width: 100% - 20%; // 80%
+
+  width: calc(100% - 20px);
+
+  // width: 50px * 50px; // Błąd!
+  // width: 50% * 5%; // Błąd!
+
+  width: 50px * 2; // 100px
+  width: 10px * 2 + 50px; // 70px
+  width: 5 * (5px + 15px); // 100px
+
+   $value: 50px;
+   // 1 - wartość jest przechowywana w zmiennej. 
+   width: $value / 5; // 10
+
+   // 2 - wartości są zawarte w nawiasach okrągłych. 
+   width: (100px / 5); // 20px
+   // 3 - wartość jest używana jako część innego wyrażenia. 
+   width: 100px / 5px + 10px; // 30px
+
+   $gridItemMargin: 20px;
+   margin: $gridItemMargin * 2;
+   margin: calc(#{$gridItemMargin} * 2);
+}
