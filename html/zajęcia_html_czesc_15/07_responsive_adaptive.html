@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /* Common container styles. */
+        .container {
+            min-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffc107;
+
+            /*  Text styles  */
+            text-align: center;
+            line-height: 180px;
+            font-size: 32px;
+            white-space: nowrap;
+        }
+
+        /* Set the maximum width of the responsive container. */
+        .container.responsive {
+            max-width: 1140px;
+            margin-bottom: 40px;
+        }
+
+        /* Set the base width of a adaptive container. */
+        .container.adaptive {
+            max-width: 400px;
+        }
+
+        @media screen and (min-width: 600px) {
+            .container {
+                background-color: #00bcd4;
+            }
+
+            /* Change the current width of the adaptive container at each breakpoint. */
+            .container.adaptive {
+                max-width: 600px;
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            .container {
+                background-color: #8bc34a;
+            }
+
+            /* Change the current width of the adaptive container at each breakpoint. */
+            .container.adaptive {
+                max-width: 900px;
+            }
+        }
+
+        @media screen and (min-width: 1140px) {
+            .container {
+                background-color: #ff5252;
+            }
+
+            /* Change the current width of the adaptive container at each breakpoint. */
+            .container.adaptive {
+                max-width: 1140px;
+            }
+        }
+
+        .container .label {
+            margin-top: 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container responsive">
+        <p class="label">I'm a responsive container</p>
+    </div>
+    <div class="container adaptive">
+        <p class="label">I'm an adaptive container</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        /* 
+ * Base container and element styles for mobile devices.
+ * All blocks go underneath each other, so there are no unnecessary flexbox styles.
+ */
+        .container {
+            max-width: 1170px;
+            min-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .element {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        /* 
+ * Override or add new styles for blocks on wider screens.
+ */
+        @media screen and (min-width: 768px) {
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .element {
+                flex-basis: calc(100% / 2);
+                font-size: 32px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .element {
+                flex-basis: calc(100% / 3);
+            }
+        }
+
+        /*
+ * SASS loop for background color generation.
+ */
+        .element:nth-child(1) {
+            background-color: #F44336;
+        }
+
+        .element:nth-child(2) {
+            background-color: #3F51B5;
+        }
+
+        .element:nth-child(3) {
+            background-color: #4CAF50;
+        }
+
+        .element:nth-child(4) {
+            background-color: #00BCD4;
+        }
+
+        .element:nth-child(5) {
+            background-color: #E91E63;
+        }
+
+        .element:nth-child(6) {
+            background-color: #009688;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="element">1</div>
+        <div class="element">2</div>
+        <div class="element">3</div>
+        <div class="element">4</div>
+        <div class="element">5</div>
+        <div class="element">6</div>
+      </div>
+</body>
+
+</html>
