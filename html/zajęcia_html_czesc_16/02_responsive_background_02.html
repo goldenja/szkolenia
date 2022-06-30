@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1x screens, default value, 320x240 image */
+        .box {
+            width: 320px;
+            height: 240px;
+            background-image: url(./images/320x240.png);
+            background-size: 320px 240px;
+        }
+
+        /* dpi (dots per inch) - liczba fizycznych pikseli na cal ekranu. Na ekranach o standardowej gęstości pikseli jeden cal to 96 punktów.*/
+        /* dppx (dots per pixel) - liczba fizycznych pikseli w jednym pikselu CSS, innymi słowy, jest to gęstość pikseli. 1dppx = 96dpi.*/
+        
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            .box {
+                background-image: url(./images/640x480.png);
+            }
+        }
+
+      
+         @media screen and (min-device-pixel-ratio:3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+            .box {
+                background-image: url(./images/900x900.png);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

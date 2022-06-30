@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        div {
+            background: yellow;
+        }
+
+        @media (orientation: landscape) {
+            body {
+                flex-direction: row;
+            }
+        }
+
+        @media (orientation: portrait) {
+            body {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+
+
+    <!-- <picture>
+        <source
+            media="(orientation: landscape)"
+            srcset="image-small.png 320w,
+                    image-medium.png 800w,
+                    image-large.png 1200w"
+            sizes="(min-width: 60rem) 80vw,
+                   (min-width: 40rem) 90vw,
+                   100vw">
+        <source
+            media="(orientation: portrait)"
+            srcset="image-small-portrait.png 160w,
+                    image-medium-portrait.png 400w,
+                    image-large-portrait.png 600w"
+            sizes="(min-width: 60rem) 80vw,
+                   (min-width: 40rem) 90vw,
+                   100vw">
+        <img src="image-small.png" alt="Image description">
+    </picture> -->
+</body>
+
+</html>
